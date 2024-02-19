@@ -1,0 +1,23 @@
+.sidebar {
+  display: none;
+  background-color: rgba(15, 54, 74, 0.2);
+  height: 100vh;
+  width: 320px;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba (0, 0, 0, 0.1);
+
+
+  li {
+    width: 100%;
+  }
+
+  .to-the-center {
+    text-align: center;
+  }
+
+  a {
+    width: 100%;
+  }
+
+}

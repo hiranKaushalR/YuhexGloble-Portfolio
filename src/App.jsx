@@ -1,14 +1,21 @@
 import { useState } from "react";
+import Navbar from "./components/Home page/Navbar";
+import Hero from "./components/Home page/Hero";
+import Service from "./components/Home page/Service";
 
-import "./App.css";
+import "./App.scss";
+import "animate.css";
+import Projects from "./components/Home page/Projects";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <div>
+      <Navbar />
+      <Hero />
+      <Service />
+      <Projects/>
+    </div>
   );
 }
 
