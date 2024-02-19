@@ -16,6 +16,7 @@ import {
   sass,
   telephone,
   tiktok,
+  sampleAvatar,
 } from "../assets";
 
 import { webDevelopment, seoOptimization, digitalMarketing } from "../assets";
@@ -163,7 +164,8 @@ export const projectDetails = [
     client: "John Doe",
     rating: 4,
     url: "blabla.com",
-    image: getInFitnessClub
+    image: getInFitnessClub,
+    tech: ["html", "bootstrap", "php"],
   },
   {
     id: "project-002",
@@ -171,7 +173,8 @@ export const projectDetails = [
     client: "John Doe",
     rating: 5,
     url: "blabla.com",
-    image: harboursidePlaza
+    image: harboursidePlaza,
+    tech: ["html", "sass", "js"],
   },
   {
     id: "project-003",
@@ -179,6 +182,50 @@ export const projectDetails = [
     client: "John Doe",
     rating: 3,
     url: "blabla.com",
-    image: luxuryGateways
+    image: luxuryGateways,
+    tech: ["react", "tailwind", "nodejs"],
+  },
+];
+
+export const testimonials = [
+  {
+    id: "testimonial-001",
+    name: "Dinusha Bandara Perera",
+    jobTitle: "Photographer",
+    avatar: sampleAvatar,
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit nulla natus quod, saepe et totam architecto doloremque deleniti voluptatem eos hic temporibus, suscipit praesentium omnis magni voluptate! Non eveniet aliquid quam distinctio aut excepturi a molestias, commodi deleniti, corrupti autem esse at, qui officiis voluptatum! Vitae temporibus soluta ipsum!",
+  },
+  {
+    id: "testimonial-002",
+    name: "Amal Perera",
+    jobTitle: "Boxer",
+    avatar: sampleAvatar,
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit nulla natus quod, saepe et totam architecto doloremque deleniti voluptatem eos hic temporibus, suscipit praesentium omnis magni voluptate! Non eveniet aliquid quam distinctio aut excepturi a molestias, commodi deleniti, corrupti autem esse at, qui officiis voluptatum! Vitae temporibus soluta ipsum!",
+  },
+  {
+    id: "testimonial-003",
+    name: "Manasick",
+    jobTitle: "HipHop Artist",
+    avatar: sampleAvatar,
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit nulla natus quod, saepe et totam architecto doloremque deleniti voluptatem eos hic temporibus, suscipit praesentium omnis magni voluptate! Non eveniet aliquid quam distinctio aut excepturi a molestias, commodi deleniti, corrupti autem esse at, qui officiis voluptatum! Vitae temporibus soluta ipsum!",
+  },
+  {
+    id: "testimonial-004",
+    name: "Amarabandu Roopasinghe",
+    jobTitle: "Photographer",
+    avatar: sampleAvatar,
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit nulla natus quod, saepe et totam architecto doloremque deleniti voluptatem eos hic temporibus, suscipit praesentium omnis magni voluptate! Non eveniet aliquid quam distinctio aut excepturi a molestias, commodi deleniti, corrupti autem esse at, qui officiis voluptatum! Vitae temporibus soluta ipsum!",
+  },
+  {
+    id: "testimonial-005",
+    name: "Kendrick Lamar",
+    jobTitle: "Artist",
+    avatar: sampleAvatar,
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit nulla natus quod, saepe et totam architecto doloremque deleniti voluptatem eos hic temporibus, suscipit praesentium omnis magni voluptate! Non eveniet aliquid quam distinctio aut excepturi a molestias, commodi deleniti, corrupti autem esse at, qui officiis voluptatum! Vitae temporibus soluta ipsum!",
   },
 ];

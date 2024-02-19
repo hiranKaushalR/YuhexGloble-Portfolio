@@ -17,6 +17,9 @@ import telephone from "./telephone.png";
 import tiktok from "./tiktok.png";
 import star from "./star.svg"
 import link from './link.svg'
+import fillStar from './fill-star.png';
+import unfillStar from './unfill-star.png';
+import sampleAvatar from './avatar-sample.png'
 
 import webDevelopment from "./web-development.png";
 import seoOptimization from "./seo-optimization.png";
@@ -45,7 +48,10 @@ export {
   telephone,
   tiktok,
   star,
-  link
+  link,
+  fillStar,
+  unfillStar,
+  sampleAvatar
 };
 
 export { webDevelopment, seoOptimization, digitalMarketing };
