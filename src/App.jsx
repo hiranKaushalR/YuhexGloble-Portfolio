@@ -4,6 +4,7 @@ import Hero from "./components/Home page/Hero";
 import Service from "./components/Home page/Service";
 import Projects from "./components/Home page/Projects";
 import Testimonials from "./components/Home page/Testimonials";
+import Footer from "./components/Home page/Footer";
 import "./App.scss";
 import "animate.css";
 
@@ -17,6 +18,7 @@ function App() {
       <Service />
       <Projects/>
       <Testimonials />
+      <Footer />
     </div>
   );
 }

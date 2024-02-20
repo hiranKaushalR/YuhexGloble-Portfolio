@@ -68,7 +68,7 @@ export const technologies = [
   },
 ];
 
-export const socialMedia = [
+export const socialMediaForFooter = [
   {
     id: "tiktok",
     icon: tiktok,
@@ -114,16 +114,16 @@ export const socialMediaForMenu = [
   },
 ];
 
-export const contact = [
+export const contacts = [
   {
     id: "phone",
     icon: telephone,
-    contact: telephoneNumber,
+    source: telephoneNumber,
   },
   {
     id: "email",
     icon: email,
-    contact: eMail,
+    source: eMail,
   },
 ];
 
@@ -217,7 +217,7 @@ export const testimonials = [
   },
   {
     id: "testimonial-004",
-    name: "Amarabandu Roopasinghe",
+    name: "Amarabandu",
     jobTitle: "Fitness Influencer",
     avatar: sampleAvatar,
     rating: 5,

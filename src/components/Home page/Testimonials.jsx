@@ -8,21 +8,18 @@ import "slick-carousel/slick/slick-theme.css";
 
 function Testimonials() {
   // Custom next arrow component
-  const CustomNextArrow = (props) => {
+  function CustomNextArrow(props) {
     const { className, style, onClick } = props;
     return <div className={`${className} hidden`} onClick={onClick} />;
-  };
+  }
 
   // Custom previous arrow component
-  const CustomPrevArrow = (props) => {
+  function CustomPrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={`${className} bg-primary hidden`}
-        onClick={onClick}
-      />
+      <div className={`${className} bg-primary hidden`} onClick={onClick} />
     );
-  };
+  }
 
   var settings = {
     dots: true,
@@ -34,19 +31,26 @@ function Testimonials() {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
-          slidesToShow: 3, // Number of slides to show on screens >= 1024px
-          slidesToScroll: 3,
+          slidesToShow: 2.5, // Number of slides to show on screens >= 1024px
+          slidesToScroll: 2,
           infinite: true,
           dots: true,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 860,
         settings: {
           slidesToShow: 2, // Number of slides to show on screens >= 768px and < 1024px
-          slidesToScroll: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
         },
       },
       {
@@ -77,12 +81,12 @@ function Testimonials() {
   }
 
   return (
-    <div className="mt-20">
+    <div className="my-24 px-2 md:px-4">
       <h1 className="font-bold text-center text-4xl pb-8">
         Client Testimonial
       </h1>
-      <div className="w-[90%] lg:w-11/12 m-auto slider-container">
-        <div className="bg-buttonBG -pb-6 m-0">
+      <div className="w-[100%] lg:w-11/12 m-auto slider-container">
+        <div className="m-0">
           <Slider {...settings} className="">
             {testimonials.map((testimonial) => (
               <div className="bg-primary text-white rounded-xl p-2">
@@ -104,7 +108,9 @@ function Testimonials() {
                     </div>
                   </div>
                 </div>
-                <div className="text-justify">{testimonial.comment}</div>
+                <div className="text-justify p-1 pt-2">
+                  {testimonial.comment}
+                </div>
               </div>
             ))}
           </Slider>
