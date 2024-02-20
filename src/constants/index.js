@@ -193,14 +193,16 @@ export const testimonials = [
     name: "Dinusha Bandara Perera",
     jobTitle: "Photographer",
     avatar: sampleAvatar,
+    rating: 2,
     comment:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit nulla natus quod, saepe et totam architecto doloremque deleniti voluptatem eos hic temporibus, suscipit praesentium omnis magni voluptate! Non eveniet aliquid quam distinctio aut excepturi a molestias, commodi deleniti, corrupti autem esse at, qui officiis voluptatum! Vitae temporibus soluta ipsum!",
   },
   {
     id: "testimonial-002",
-    name: "Amal Perera",
+    name: "Mike Tyson",
     jobTitle: "Boxer",
     avatar: sampleAvatar,
+    rating: 4,
     comment:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit nulla natus quod, saepe et totam architecto doloremque deleniti voluptatem eos hic temporibus, suscipit praesentium omnis magni voluptate! Non eveniet aliquid quam distinctio aut excepturi a molestias, commodi deleniti, corrupti autem esse at, qui officiis voluptatum! Vitae temporibus soluta ipsum!",
   },
@@ -209,14 +211,16 @@ export const testimonials = [
     name: "Manasick",
     jobTitle: "HipHop Artist",
     avatar: sampleAvatar,
+    rating: 3,
     comment:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit nulla natus quod, saepe et totam architecto doloremque deleniti voluptatem eos hic temporibus, suscipit praesentium omnis magni voluptate! Non eveniet aliquid quam distinctio aut excepturi a molestias, commodi deleniti, corrupti autem esse at, qui officiis voluptatum! Vitae temporibus soluta ipsum!",
   },
   {
     id: "testimonial-004",
     name: "Amarabandu Roopasinghe",
-    jobTitle: "Photographer",
+    jobTitle: "Fitness Influencer",
     avatar: sampleAvatar,
+    rating: 5,
     comment:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit nulla natus quod, saepe et totam architecto doloremque deleniti voluptatem eos hic temporibus, suscipit praesentium omnis magni voluptate! Non eveniet aliquid quam distinctio aut excepturi a molestias, commodi deleniti, corrupti autem esse at, qui officiis voluptatum! Vitae temporibus soluta ipsum!",
   },
@@ -225,6 +229,7 @@ export const testimonials = [
     name: "Kendrick Lamar",
     jobTitle: "Artist",
     avatar: sampleAvatar,
+    rating: 4,
     comment:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit nulla natus quod, saepe et totam architecto doloremque deleniti voluptatem eos hic temporibus, suscipit praesentium omnis magni voluptate! Non eveniet aliquid quam distinctio aut excepturi a molestias, commodi deleniti, corrupti autem esse at, qui officiis voluptatum! Vitae temporibus soluta ipsum!",
   },
