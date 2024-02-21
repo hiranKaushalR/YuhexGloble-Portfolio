@@ -1,25 +1,29 @@
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Home page/Navbar";
-import Hero from "./components/Home page/Hero";
-import Service from "./components/Home page/Service";
-import Projects from "./components/Home page/Projects";
-import Testimonials from "./components/Home page/Testimonials";
+import AllHome from "./components/Home page/AllHome";
 import Footer from "./components/Home page/Footer";
+import ProjectBody from "./components/Project Page/ProjectBody";
+import BlogBody from "./components/Blog Page/BlogBody";
+import AboutBody from "./components/About Page/AboutBody";
+import ContactBody from "./components/Contact Page/ContactBody";
+
+
 import "./App.scss";
 import "animate.css";
 
-
 function App() {
-
   return (
-    <div>
+    <BrowserRouter>
       <Navbar />
-      <Hero />
-      <Service />
-      <Projects/>
-      <Testimonials />
+      <Routes>
+        <Route index element={<AllHome />} />
+        <Route path="/project" element={<ProjectBody />} />
+        <Route path="/blogs" element={<BlogBody />} />
+        <Route path="/about" element={<AboutBody />} />
+        <Route path="/contact" element={<ContactBody />} />
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 

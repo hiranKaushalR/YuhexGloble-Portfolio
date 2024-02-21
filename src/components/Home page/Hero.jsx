@@ -1,5 +1,6 @@
 import React from "react";
 import { technologies } from "../../constants";
+import { Link } from "react-router-dom";
 
 function Hero() {
   // Rendering Technology Icons
@@ -20,9 +21,11 @@ function Hero() {
             <button className="mb-2 xs:mb-0 py-2 border-2 w-[250px] font-semibold transition-all ease-in-out duration-300  text-white hover:bg-buttonBG rounded-md">
               Book an Appointment
             </button>
-            <button className="my-2 xs:my-0 py-2 border-2 w-[250px] font-semibold transition-all ease-in-out duration-300  text-white hover:bg-buttonBG rounded-md">
-              Projects
-            </button>
+            <Link to="/project">
+              <button className="my-2 xs:my-0 py-2 border-2 w-[250px] font-semibold transition-all ease-in-out duration-300  text-white hover:bg-buttonBG rounded-md">
+                Projects
+              </button>
+            </Link>
           </div>
         </div>
         <div className="flex justify-between w-full">{technologyIcons}</div>

@@ -5,14 +5,19 @@ export default {
     extend: {
       colors: {
         primary: "#0F364A",
-        buttonBG: '#477C99'
+        buttonBG: '#477C99',
+        cardBG: '#9BBEC8',
+        customRed: '#FF0C0C',
+        formBG: '#477c99',
+        formBorder: '#59E3F5'
       },
       screens: {
         navRes: "860px",
         xs: '565px',
-        cardRes: '880px'
+        cardRes: '880px',
       },
     },
   },
   plugins: [],
 };
+

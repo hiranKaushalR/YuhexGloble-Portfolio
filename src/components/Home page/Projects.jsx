@@ -1,11 +1,30 @@
 import React from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { projectDetails } from "../../constants";
-import { link, fillStar, unfillStar } from "../../assets"; 
+import { link, fillStar, unfillStar } from "../../assets";
 
-function Projects() {
+function ProjectCard({ project, index }) {
+  const { ref, inView } = useInView();
 
-  // getting the stars for rating ✨
-  function renderStars (rating) {
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      x: index % 3 === 0 ? -100 : index % 3 === 1 ? 0 : 100,
+      y: index % 3 === 1 ? 100 : 0,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  function renderStars(rating) {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
       if (i <= rating) {
@@ -19,29 +38,41 @@ function Projects() {
       }
     }
     return stars;
-  };
+  }
 
   return (
-    <div className="my-12">
+    <motion.div
+      ref={ref}
+      className="bg-primary text-white max-w-[300px]  cardRes:w-[280px] lg:w-[320px] rounded-lg p-1 m-auto my-6"
+      variants={cardVariants}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+    >
+      <h1 className="text-center py-1 text-xl capitalize font-semibold">
+        {project.projectName}
+      </h1>
+      <img src={project.image} alt="" />
+      <div className="flex justify-center gap-1 py-2">
+        {renderStars(project.rating)}
+      </div>
+      <p className="text-center">Ordered by: {project.client}</p>
+      <img src={link} alt="link" className="rotate-45" />
+    </motion.div>
+  );
+}
+
+function Projects() {
+  return (
+    <div className="my-12" id="project">
       <div className="pt-[60px] pb-2 text-center ">
         <h1 className="text-4xl font-semibold">Latest of us</h1>
-        <h1 className="text-lg capitalize">most recent projects of YuhexGloble's</h1>
+        <h1 className="text-lg capitalize">
+          most recent projects of YuhexGloble's
+        </h1>
       </div>
       <div className="cardRes:flex justify-between">
-        {projectDetails.map((detail) => (
-          <div
-            key={detail.id}
-            id={detail.id}
-            className="bg-primary text-white max-w-[300px]  cardRes:w-[280px] lg:w-[320px] rounded-lg p-1 m-auto my-6"
-          >
-            <h1 className="text-center py-1 text-xl capitalize font-semibold">{detail.projectName}</h1>
-            <img src={detail.image} alt="" />
-
-            <div className="flex justify-center gap-1 py-2">{renderStars(detail.rating)}</div>
-            <p className="text-center">Ordered by: {detail.client}</p>
-            <img src={link} alt="link" className="rotate-45" />
-            
-          </div>
+        {projectDetails.map((project, index) => (
+          <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>
     </div>
