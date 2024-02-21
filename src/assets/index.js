@@ -29,6 +29,10 @@ import getInFitnessClub from "./get-in-fitness-club.png";
 import harboursidePlaza from "./harbourside-plaza.png";
 import luxuryGateways from "./luxury-gateways.png";
 
+import bubble from "./bubble.png"
+
+import about from './about.png'
+
 export {
   css,
   email,
@@ -51,7 +55,9 @@ export {
   link,
   fillStar,
   unfillStar,
-  sampleAvatar
+  sampleAvatar,
+  about,
+  bubble
 };
 
 export { webDevelopment, seoOptimization, digitalMarketing };
