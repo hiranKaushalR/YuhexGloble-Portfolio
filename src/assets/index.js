@@ -32,6 +32,7 @@ import luxuryGateways from "./luxury-gateways.png";
 import bubble from "./bubble.png"
 
 import about from './about.png'
+import clockTicking from './clock-ticking.json'
 
 export {
   css,
@@ -57,7 +58,8 @@ export {
   unfillStar,
   sampleAvatar,
   about,
-  bubble
+  bubble,
+  clockTicking
 };
 
 export { webDevelopment, seoOptimization, digitalMarketing };

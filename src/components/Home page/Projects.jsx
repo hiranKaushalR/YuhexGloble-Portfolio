@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { projectDetails } from "../../constants";
 import { link, fillStar, unfillStar } from "../../assets";
@@ -10,8 +10,8 @@ function ProjectCard({ project, index }) {
   const cardVariants = {
     hidden: {
       opacity: 0,
-      x: index % 3 === 0 ? -100 : index % 3 === 1 ? 0 : 100,
-      y: index % 3 === 1 ? 100 : 0,
+      x: index % 3 === 0 ? -40 : index % 3 === 1 ? 0 : 40,
+      y: index % 3 === 1 ? 40 : 0,
     },
     visible: {
       opacity: 1,
@@ -43,7 +43,7 @@ function ProjectCard({ project, index }) {
   return (
     <motion.div
       ref={ref}
-      className="bg-primary text-white max-w-[300px]  cardRes:w-[280px] lg:w-[320px] rounded-lg p-1 m-auto my-6"
+      className="bg-cardBG text-black max-w-[350px]  cardRes:w-[280px] lg:w-[320px] rounded-lg p-1 m-auto my-6"
       variants={cardVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
@@ -70,7 +70,7 @@ function Projects() {
           most recent projects of YuhexGloble's
         </h1>
       </div>
-      <div className="cardRes:flex justify-between">
+      <div className="flex flex-col cardRes:flex-row">
         {projectDetails.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}

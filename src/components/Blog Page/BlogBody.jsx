@@ -1,8 +1,9 @@
 import React from 'react'
+import { clockTicking } from '../../assets'
 
 function BlogBody() {
   return (
-    <div>Blogs are coming soon</div>
+    <div className='h-screen'><img src={clockTicking} /></div>
   )
 }
 

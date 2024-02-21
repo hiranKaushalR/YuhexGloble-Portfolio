@@ -9,15 +9,15 @@ function ServiceCard({ service, index }) {
   const cardVariants = {
     hidden: {
       opacity: 0,
-      x: index % 3 === 0 ? -100 : index % 3 === 1 ? 0 : 100,
-      y: index % 3 === 1 ? 100 : 0,
+      x: index % 3 === 0 ? -40 : index % 3 === 1 ? 0 : 40,
+      y: index % 3 === 1 ? 40 : 0,
     },
     visible: {
       opacity: 1,
       x: 0,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.4,
         ease: "easeInOut",
       },
     },
@@ -26,7 +26,7 @@ function ServiceCard({ service, index }) {
   return (
     <motion.div
       ref={ref}
-      className="bg-primary text-white text-justify rounded-lg p-1 my-6 cardRes:my-0 m-auto w-[300px]  cardRes:w-[280px] lg:w-[320px]"
+      className="bg-cardBG text-Black text-justify rounded-lg p-1 my-6 cardRes:my-0 m-auto w-[300px]  cardRes:w-[280px] lg:w-[320px]"
       variants={cardVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}

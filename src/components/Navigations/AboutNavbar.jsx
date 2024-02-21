@@ -4,8 +4,6 @@ import menu from "../../assets/Menu.png";
 import close from "../../assets/close.png";
 import { socialMediaForMenu } from "../../constants";
 import { NavLink } from "react-router-dom";
-import Modal from "../Home page/Modal";
-
 function AboutNavbar() {
   const [toggleSidebar, setToggleSidebar] = useState(false);
   const [openModal, setOpenModal] = useState(false); // State for controlling modal visibility
@@ -120,12 +118,7 @@ function AboutNavbar() {
           </AnimatePresence>
         </nav>
       </div>
-      {/* Render the Modal component */}
-      <Modal open={openModal} handleClose={() => setOpenModal(false)}>
-        {/* You can place the content of your modal here */}
-        <h2>Appointment Modal Content</h2>
-        <p>This is where you can add your appointment form or content.</p>
-      </Modal>
+      
     </header>
   );
 }
