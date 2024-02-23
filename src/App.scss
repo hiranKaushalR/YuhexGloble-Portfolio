@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Times New Roman', sans-serif;
+}
+
 .sidebar {
   display: none;
   background-color: rgba(15, 54, 74, 0.2);
@@ -76,4 +80,20 @@
   top: 10px;
   right: 10px;
   padding: 5px 7px;
+}
+
+
+@font-face {
+  font-family: 'Times New Roman';
+  src: url(../public/times\ new\ roman.ttf);
+}
+
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spinners {
+  -moz-appearance: textfield;
 }

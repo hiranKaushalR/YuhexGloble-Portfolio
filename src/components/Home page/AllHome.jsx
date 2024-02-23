@@ -6,10 +6,14 @@ import Testimonials from './Testimonials'
 import Contact from './Contact'
 
 
-function AllHome() {
+function AllHome(props) {
+  const openModal = props.openModal;
+  const setOpenModal = props.setOpenModal;
+
+
   return (
     <div>
-        <Hero />
+        <Hero  openModal={openModal} setOpenModal={setOpenModal}/>
         <Service />
         <Projects />
         <Testimonials />

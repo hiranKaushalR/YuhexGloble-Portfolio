@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Modal from "../Modal/Modal";
 import { motion, AnimatePresence } from "framer-motion";
 import menu from "../../assets/Menu.png";
 import close from "../../assets/close.png";
 import { socialMediaForMenu } from "../../constants";
 import { NavLink } from "react-router-dom";
 
-function HomeNavbar() {
+function HomeNavbar(props) {
   const [toggleSidebar, setToggleSidebar] = useState(false);
+  const openModal = props.openModal;
+  const setOpenModal = props.setOpenModal;  
 
   // Toggle the side bar in mobile mode
   function showSidebar() {
@@ -18,14 +21,15 @@ function HomeNavbar() {
   }
 
   return (
-    <header className="bg-primary text-white sticky top-0 z-50">
+    <header className="bg-primary text-white sticky top-0 z-50" >
       <div className="flex justify-between items-center mx-auto">
         <h1 className="font-bold text-lg">YuhexGloble</h1>
         <nav>
+
           {/* Navigation for desktop mode */}
           <ul className="hidden navRes:flex font-semibold items-center">
             <li className="mx-4">
-              <NavLink to="/">Home</NavLink>
+              <a href="#navigation-bar">Home</a>
             </li>
             <li className="mx-4">
               <a href="#service">Service</a>
@@ -45,15 +49,19 @@ function HomeNavbar() {
             <li className="">
               <button
                 onClick={() => setOpenModal(true)}
+                
                 className="bg-buttonBG px-4 py-1 rounded"
               >
                 Appointment
               </button>
             </li>
+
           </ul>
 
+
+
           {/* Navigation for mobile mode */}
-          <div onClick={showSidebar} className="block navRes:hidden">
+          <div onClick={openModal ? '' : showSidebar} className="block navRes:hidden">
             <img src={menu} alt="Menu" className="w-8 h-6 cursor-pointer" />
           </div>
           <AnimatePresence>
@@ -72,13 +80,13 @@ function HomeNavbar() {
                   <h1 className="text-xl">YuhexGlobal</h1>
                   <img src={close} alt="close" className="w-8" />
                 </li>
-                <li className="m-1 mt-3  p-2">
-                  <NavLink to="/">Home</NavLink>
+                <li className="m-1 mt-3  p-2"  onClick={hideSidebar}>
+                  <a href="#navigation-bar">Home</a>
                 </li>
-                <li className="m-1 p-2">
+                <li className="m-1 p-2" onClick={hideSidebar}>
                   <a href="#service">Service</a>
                 </li>
-                <li className="m-1 p-2">
+                <li className="m-1 p-2" onClick={hideSidebar}>
                   <a href="#project">Project</a>
                 </li>
                 <li className="m-1 p-2">
@@ -90,7 +98,7 @@ function HomeNavbar() {
                 <li className="m-1 p-2">
                   <NavLink to="/contact">Contact</NavLink>
                 </li>
-                <li className="to-the-center py-4">
+                <li className="to-the-center py-4"  onClick={hideSidebar}>
                   <a href="#"></a>
                   <button
                     className="bg-[#477C99] px-6 py-2 font-semibold mx-auto rounded-lg"
@@ -118,7 +126,7 @@ function HomeNavbar() {
           </AnimatePresence>
         </nav>
       </div>
-  
+      {openModal && <Modal setOpenModal={setOpenModal} />}
     </header>
   );
 }

@@ -1,18 +1,18 @@
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
 import { testimonials } from "../../constants";
 import { fillStar, unfillStar } from "../../assets";
 import Slider from "react-slick";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useInView } from "react-intersection-observer";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      style={{ ...style, display: "none"}}
+      style={{ ...style, display: "none" }}
       onClick={onClick}
     />
   );
@@ -29,36 +29,8 @@ function SamplePrevArrow(props) {
   );
 }
 
-function Testimonials() {
-  const controlsLeft = useAnimation();
-  const controlsRight = useAnimation();
-  const [refLeft, inViewLeft] = useInView({ triggerOnce: true });
-  const [refRight, inViewRight] = useInView({ triggerOnce: true });
-
-  React.useEffect(() => {
-    if (inViewLeft) {
-      controlsLeft.start({ x: 0, opacity: 1 });
-    }
-  }, [controlsLeft, inViewLeft]);
-
-  React.useEffect(() => {
-    if (inViewRight) {
-      controlsRight.start({ x: 0, opacity: 1 });
-    }
-  }, [controlsRight, inViewRight]);
-
-  var settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-  };
+function TestimonialsWithAnimations({ service, index }) {
+  const { ref, inView } = useInView();
 
   // getting the stars for rating ✨
   function renderStars(rating) {
@@ -77,15 +49,44 @@ function Testimonials() {
     return stars;
   }
 
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: index % 3 === 1 ? 40 : 0,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
+
   return (
-    <div className="my-24 px-2 md:px-4 flex flex-col-reverse md:flex-row items-center justify-center md:gap-20">
-      <motion.div
-        ref={refLeft}
-        initial={{ x: "-100%", opacity: 0 }}
-        animate={controlsLeft}
-        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="max-w-[500px] mx-auto md:mx-0"
-      >
+    <motion.div
+      className="my-24 px-2 w md:px-4 flex flex-col-reverse md:flex-row items-center justify-evenly"
+      ref={ref}
+      variants={cardVariants}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+    >
+      <div className="max-w-[500px] mx-auto md:mx-0">
         <Slider {...settings}>
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-cardBG text-black rounded-xl py-2">
@@ -105,22 +106,22 @@ function Testimonials() {
                   <div className="flex">{renderStars(testimonial.rating)}</div>
                 </div>
               </div>
-              <div className="text-justify p-1 pt-2">
-                {testimonial.comment}
-              </div>
+              <div className="text-justify p-1 pt-2">{testimonial.comment}</div>
             </div>
           ))}
         </Slider>
-      </motion.div>
-      <motion.h1
-        ref={refRight}
-        initial={{ x: "100%", opacity: 0 }}
-        animate={controlsRight}
-        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="font-bold text-center text-4xl pb-8"
-      >
+      </div>
+      <h1 className="font-bold text-center text-4xl pb-8">
         Client <br className="hidden md:block" /> Testimonials
-      </motion.h1>
+      </h1>
+    </motion.div>
+  );
+}
+
+function Testimonials() {
+  return (
+    <div>
+      <TestimonialsWithAnimations />
     </div>
   );
 }

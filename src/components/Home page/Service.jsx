@@ -9,8 +9,8 @@ function ServiceCard({ service, index }) {
   const cardVariants = {
     hidden: {
       opacity: 0,
-      x: index % 3 === 0 ? -40 : index % 3 === 1 ? 0 : 40,
-      y: index % 3 === 1 ? 40 : 0,
+      x: index % 3 === 0 ? -10 : index % 3 === 1 ? 0 : 10,
+      y: index % 3 === 1 ? 10 : 0,
     },
     visible: {
       opacity: 1,

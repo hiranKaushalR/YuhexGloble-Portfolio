@@ -20,6 +20,7 @@ import link from './link.svg'
 import fillStar from './fill-star.png';
 import unfillStar from './unfill-star.png';
 import sampleAvatar from './avatar-sample.png'
+import close from './close.png'
 
 import webDevelopment from "./web-development.png";
 import seoOptimization from "./seo-optimization.png";
@@ -32,6 +33,7 @@ import luxuryGateways from "./luxury-gateways.png";
 import bubble from "./bubble.png"
 
 import about from './about.png'
+import aboutPage from './about-page.png'
 import clockTicking from './clock-ticking.json'
 
 export {
@@ -58,8 +60,10 @@ export {
   unfillStar,
   sampleAvatar,
   about,
+  aboutPage,
   bubble,
-  clockTicking
+  clockTicking,
+  close
 };
 
 export { webDevelopment, seoOptimization, digitalMarketing };

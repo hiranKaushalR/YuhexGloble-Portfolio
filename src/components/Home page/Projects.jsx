@@ -10,8 +10,8 @@ function ProjectCard({ project, index }) {
   const cardVariants = {
     hidden: {
       opacity: 0,
-      x: index % 3 === 0 ? -40 : index % 3 === 1 ? 0 : 40,
-      y: index % 3 === 1 ? 40 : 0,
+      x: index % 3 === 0 ? -10 : index % 3 === 1 ? 0 : 10,
+      y: index % 3 === 1 ? 10 : 0,
     },
     visible: {
       opacity: 1,
@@ -43,7 +43,7 @@ function ProjectCard({ project, index }) {
   return (
     <motion.div
       ref={ref}
-      className="bg-cardBG text-black max-w-[350px]  cardRes:w-[280px] lg:w-[320px] rounded-lg p-1 m-auto my-6"
+      className={`bg-cardBG text-black max-w-[350px]  cardRes:w-[280px] lg:w-[320px] rounded-lg p-1 m-auto my-6`}
       variants={cardVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}

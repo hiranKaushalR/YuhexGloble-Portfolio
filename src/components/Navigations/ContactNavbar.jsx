@@ -1,12 +1,16 @@
 import React, { useState } from "react";
+import Modal from "../Modal/Modal";
 import { motion, AnimatePresence } from "framer-motion";
 import menu from "../../assets/Menu.png";
 import close from "../../assets/close.png";
 import { socialMediaForMenu } from "../../constants";
 import { NavLink } from "react-router-dom";
 
-function ContactNavbar() {
+function ContactNavbar(props) {
   const [toggleSidebar, setToggleSidebar] = useState(false);
+
+  const openModal = props.openModal;
+  const setOpenModal = props.setOpenModal;
 
   // Toggle the side bar in mobile mode
   function showSidebar() {
@@ -53,7 +57,7 @@ function ContactNavbar() {
           </ul>
 
           {/* Navigation for mobile mode */}
-          <div onClick={showSidebar} className="block navRes:hidden">
+          <div onClick={openModal ? '' : showSidebar} className="block navRes:hidden">
             <img src={menu} alt="Menu" className="w-8 h-6 cursor-pointer" />
           </div>
           <AnimatePresence>
@@ -90,7 +94,7 @@ function ContactNavbar() {
                 <li className="m-1 p-2">
                   <NavLink to="/contact">Contact</NavLink>
                 </li>
-                <li className="to-the-center py-4">
+                <li className="to-the-center my-4"   onClick={hideSidebar}>
                   <a href="#"></a>
                   <button
                     className="bg-[#477C99] px-6 py-2 font-semibold mx-auto rounded-lg"
@@ -118,7 +122,8 @@ function ContactNavbar() {
           </AnimatePresence>
         </nav>
       </div>
-    
+      {openModal && <Modal setOpenModal={setOpenModal} />}
+
     </header>
   );
 }

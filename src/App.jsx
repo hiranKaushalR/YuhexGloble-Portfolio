@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeNavbar from "./components/Navigations/HomeNavbar";
 import ProjectNavbar from "./components/Navigations/ProjectNavbar";
@@ -11,40 +12,73 @@ import BlogBody from "./components/Blog Page/BlogBody";
 import AboutBody from "./components/About Page/AboutBody";
 import ContactBody from "./components/Contact Page/ContactBody";
 
-
 import "./App.scss";
-import "animate.css";
 
 function App() {
+  const [openModal, setOpenModal] = useState(false);
+
+  useEffect(() => {
+    function handleScroll(event) {
+      if (openModal) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    }
+
+    if (openModal) {
+      window.addEventListener("scroll", handleScroll);
+    } else {
+      window.removeEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [openModal]);
   return (
     <BrowserRouter>
       {/* Conditionally render different navigation bars based on the current route */}
       <Routes>
         <Route
           path="/*"
-          element={<HomeNavbar />} // Render HomeNavbar for all routes
+          element={
+            <HomeNavbar openModal={openModal} setOpenModal={setOpenModal} />
+          } // Render HomeNavbar for all routes
         />
         <Route
           path="/project/*"
-          element={<ProjectNavbar />} // Render ProjectNavbar for project routes
+          element={
+            <ProjectNavbar openModal={openModal} setOpenModal={setOpenModal} />
+          } // Render ProjectNavbar for project routes
         />
         <Route
           path="/blogs/*"
-          element={<BlogNavbar />} // Render BlogNavbar for blog routes
+          element={
+            <BlogNavbar openModal={openModal} setOpenModal={setOpenModal} />
+          } // Render BlogNavbar for blog routes
         />
         <Route
           path="/about/*"
-          element={<AboutNavbar />} // Render AboutNavbar for about routes
+          element={
+            <AboutNavbar openModal={openModal} setOpenModal={setOpenModal} />
+          } // Render AboutNavbar for about routes
         />
         <Route
           path="/contact/*"
-          element={<ContactNavbar />} // Render ContactNavbar for contact routes
+          element={
+            <ContactNavbar openModal={openModal} setOpenModal={setOpenModal} />
+          } // Render ContactNavbar for contact routes
         />
       </Routes>
 
       {/* Render page content based on routes */}
       <Routes>
-        <Route index element={<AllHome />} />
+        <Route
+          index
+          element={
+            <AllHome openModal={openModal} setOpenModal={setOpenModal} />
+          }
+        />
         <Route path="/project" element={<ProjectBody />} />
         <Route path="/blogs" element={<BlogBody />} />
         <Route path="/about" element={<AboutBody />} />

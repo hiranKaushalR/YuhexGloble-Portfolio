@@ -2,7 +2,7 @@ import React from 'react'
 
 function ProjectBody() {
   return (
-    <div>ProjectBody</div>
+    <div className='h-screen'>ProjectBody</div>
   )
 }
 
