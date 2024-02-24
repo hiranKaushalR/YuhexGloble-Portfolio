@@ -5,6 +5,7 @@ import menu from "../../assets/Menu.png";
 import close from "../../assets/close.png";
 import { socialMediaForMenu } from "../../constants";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 function BlogNavbar(props) {
   const [toggleSidebar, setToggleSidebar] = useState(false);
@@ -32,7 +33,16 @@ function BlogNavbar(props) {
               <NavLink to="/">Home</NavLink>
             </li>
             <li className="mx-4">
-              <NavLink to="/#service"><a href="#service">Service</a></NavLink>
+            <NavLink
+                to="/#service"
+                smooth={true}
+                spy={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer"
+              >
+                Service
+              </NavLink>
             </li>
             <li className="mx-4">
               <NavLink to="/project">Project</NavLink>

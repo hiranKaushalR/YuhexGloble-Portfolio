@@ -64,7 +64,7 @@ function ProjectCard({ project, index }) {
 function Projects() {
   return (
     <div className="my-12" id="project">
-      <div className="pt-[60px] pb-2 text-center ">
+      <div className="pb-2 text-center ">
         <h1 className="text-4xl font-semibold">Latest of us</h1>
         <h1 className="text-lg capitalize">
           most recent projects of YuhexGloble's
@@ -75,6 +75,7 @@ function Projects() {
           <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>
+      <button className="px-6 py-2 rounded-xl border border-primary text-center">SEE MORE</button>
     </div>
   );
 }

@@ -13,6 +13,7 @@ import AboutBody from "./components/About Page/AboutBody";
 import ContactBody from "./components/Contact Page/ContactBody";
 
 import "./App.scss";
+import NoPage from "./components/No Page/NoPage";
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
@@ -40,7 +41,7 @@ function App() {
       {/* Conditionally render different navigation bars based on the current route */}
       <Routes>
         <Route
-          path="/*"
+          path="/"
           element={
             <HomeNavbar openModal={openModal} setOpenModal={setOpenModal} />
           } // Render HomeNavbar for all routes
@@ -69,6 +70,13 @@ function App() {
             <ContactNavbar openModal={openModal} setOpenModal={setOpenModal} />
           } // Render ContactNavbar for contact routes
         />
+
+<Route
+          path="/*"
+          element={
+            <ProjectNavbar openModal={openModal} setOpenModal={setOpenModal} />
+          } // Render ContactNavbar for * routes
+        />
       </Routes>
 
       {/* Render page content based on routes */}
@@ -83,6 +91,7 @@ function App() {
         <Route path="/blogs" element={<BlogBody />} />
         <Route path="/about" element={<AboutBody />} />
         <Route path="/contact" element={<ContactBody />} />
+        <Route path="*" element={<NoPage/>} />
       </Routes>
 
       <Footer />

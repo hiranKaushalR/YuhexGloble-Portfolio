@@ -36,6 +36,9 @@ import about from './about.png'
 import aboutPage from './about-page.png'
 import clockTicking from './clock-ticking.json'
 
+import blogCover from './blog-cover.jpg'
+import nopageError from './404-error.svg'
+
 export {
   css,
   email,
@@ -63,7 +66,9 @@ export {
   aboutPage,
   bubble,
   clockTicking,
-  close
+  close,
+  blogCover,
+  nopageError
 };
 
 export { webDevelopment, seoOptimization, digitalMarketing };

@@ -5,6 +5,7 @@ import menu from "../../assets/Menu.png";
 import close from "../../assets/close.png";
 import { socialMediaForMenu } from "../../constants";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 function ProjectNavbar(props) {
   const [toggleSidebar, setToggleSidebar] = useState(false);
