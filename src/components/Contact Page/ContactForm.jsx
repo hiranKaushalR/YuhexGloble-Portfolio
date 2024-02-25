@@ -66,7 +66,7 @@ function ContactForm() {
         <div className="flex justify-evenly items-center w-full bg-formBG rounded-lg ">
           <div className=" py-10">
            
-            <form className="flex justify-between items-stretch flex-col gap-4 mx-2">
+            <form className="flex justify-between items-stretch flex-col gap-4 mx-2 font-roboto">
               <input
                 type="text"
                 className="bg-formBG border border-formBorder rounded-md  focus:outline-none p-1"

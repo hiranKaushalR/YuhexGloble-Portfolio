@@ -3,7 +3,7 @@ import { socialMediaForMenu, contacts } from "../../constants";
 
 function Footer() {
   return (
-    <footer className="bg-primary text-white py-8">
+    <footer className="bg-primary text-white pt-8">
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="flex justify-between items-center flex-col sm:flex-row border-b-2">
           <div className="pb-4">
@@ -14,7 +14,7 @@ function Footer() {
             <input
               type="email"
               placeholder="Sign-up for the News and Offers"
-              className="bg-primary text-white px-2 py-1 md:px-4 md:py-2 w-[280px] md:w-[300px] border-white border-solid border  focus:outline-none rounded-t-md xs:rounded-l-md"
+              className="bg-primary text-white px-2 py-1 md:px-4 md:py-2 w-[280px] md:w-[300px] border-white border-solid border  focus:outline-none rounded-t-md xs:rounded-l-md font-roboto"
             />
             <input
               type="submit"
@@ -49,8 +49,12 @@ function Footer() {
           </ul>
           <div className="flex flex-col xs:flex-row xs:items-center justify-center gap-4 xs:gap-10 my-9">
             {contacts.map((contact) => (
-              <div className="flex items-center gap-4">
-                <img src={contact.icon} alt={contact.id} className="w-5 xs:w-7" />
+              <div className="flex items-center gap-4 font-roboto">
+                <img
+                  src={contact.icon}
+                  alt={contact.id}
+                  className="w-5 xs:w-7"
+                />
                 <h1 className="text-lg xs:text-xl">{contact.source}</h1>
               </div>
             ))}
@@ -59,11 +63,18 @@ function Footer() {
             {socialMediaForMenu.map((socialmedia) => (
               <div id={socialmedia.id}>
                 <a href={socialmedia.link} target="_blank">
-                  <img src={socialmedia.icon} alt={socialmedia.id} className="w-8"/>
+                  <img
+                    src={socialmedia.icon}
+                    alt={socialmedia.id}
+                    className="w-8"
+                  />
                 </a>
               </div>
             ))}
           </div>
+          <p className="py-0 text-center pt-4">
+            &copy; Copyright YuhexGlobal Alright Reserved
+          </p>
         </div>
       </div>
     </footer>

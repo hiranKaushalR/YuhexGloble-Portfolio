@@ -83,7 +83,7 @@ function ContactFormWithAnimations({ project, index }) {
         <div className="flex justify-evenly items-center w-full">
           <div className="">
             <h1 className=" text-[40px] font-semibold pb-4">Let's Work Well Together</h1>
-            <form className="flex justify-between items-stretch flex-col gap-4">
+            <form className="flex justify-between items-stretch flex-col gap-4 font-roboto">
               <input
                 type="text"
                 className="bg-formBG border border-formBorder rounded-md  focus:outline-none p-1"

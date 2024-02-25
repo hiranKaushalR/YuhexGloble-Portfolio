@@ -20,7 +20,8 @@ export default {
         cardRes: "880px",
       },
       fontFamily: {
-        poppins: ['"Poppins"',  ...defaultTheme.fontFamily.sans]
+        poppins: ['"Poppins"',  ...defaultTheme.fontFamily.sans],
+        roboto: ['"Roboto"', ...defaultTheme.fontFamily.sans]
       }
     },
   },

@@ -105,9 +105,9 @@ function TestimonialsWithAnimations({ service, index }) {
                     <h1 className="text-lg p-0 font-semibold">
                       {testimonial.name}
                     </h1>
-                    <h3 className="text-sm p-0">{testimonial.jobTitle}</h3>
+                    <h3 className="text-sm p-0 font-roboto">{testimonial.jobTitle}</h3>
                   </div>
-                  <div className="flex">{renderStars(testimonial.rating)}</div>
+                  <div className="flex gap-x-1">{renderStars(testimonial.rating)}</div>
                 </div>
               </div>
               <div className="text-justify p-1 pt-2">
