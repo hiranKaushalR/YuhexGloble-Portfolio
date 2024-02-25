@@ -15,7 +15,6 @@ function AllHome(props) {
       <Hero openModal={openModal} setOpenModal={setOpenModal} />
       <Service />
       <Projects />
-      <About />
       <Testimonials />
 
       <Contact />

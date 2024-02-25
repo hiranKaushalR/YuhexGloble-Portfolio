@@ -68,7 +68,7 @@ function ProjectCard({ project, index }) {
         <div className="w-2/4">
         <img
           src={project.image}
-          alt={service.id}
+          alt={project.id}
           className="rounded-lg w-full bg-cover"
         />
         </div>

@@ -195,7 +195,7 @@ export const testimonials = [
     name: "Dinusha Bandara Perera",
     jobTitle: "Photographer",
     avatar: sampleAvatar,
-    rating: 2,
+    rating: 4,
     comment:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit nulla natus quod, saepe et totam architecto doloremque deleniti voluptatem eos hic temporibus, suscipit praesentium omnis magni voluptate! Non eveniet aliquid quam distinctio aut excepturi a molestias, commodi deleniti, corrupti autem esse at, qui officiis voluptatum! Vitae temporibus soluta ipsum!",
   },

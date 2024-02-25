@@ -6,7 +6,7 @@ import AboutHead from "./AboutHead";
 
 function AboutMain() {
   return (
-    <div className="bg-primary text-white">
+    <div className="bg-white text-black">
       <AboutHead />
      
       <div className="py-10 mx-[10%]">

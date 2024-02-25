@@ -9,7 +9,7 @@ function AboutTeam() {
         {team.map((member) => (
           <div
             id={member.id}
-            className="bg-formBG p-2 rounded-lg flex flex-col gap-y-4 text-black cursor-pointer"
+            className="bg-cardBG p-2 rounded-lg flex flex-col gap-y-4 text-black cursor-pointer"
           >
             <img
               src={member.avatar}

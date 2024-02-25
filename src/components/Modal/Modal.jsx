@@ -84,7 +84,7 @@ function Modal(props) {
 
 
   return (
-    <div className="modal-background bg-primary">
+    <div className="modal-background bg-black">
       
       <div className="modal-container bg-formBG">
         {!isAppointmentMade ? (

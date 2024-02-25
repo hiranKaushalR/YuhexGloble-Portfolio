@@ -10,7 +10,7 @@ function Footer() {
             <h1 className="text-4xl font-bold">YuhexGlobal</h1>
             <h2 className="text-[12px]">Company Description Goes Here</h2>
           </div>
-          <form className="flex justify-between items-stretch flex-col xs:flex-row mb-6 md:mb-0">
+          <form className="flex justify-between items-stretch flex-col xs:flex-row mb-6 md:mb-0 gap-y-2">
             <input
               type="email"
               placeholder="Sign-up for the News and Offers"
@@ -24,7 +24,7 @@ function Footer() {
           </form>
         </div>
         <div className="mt-6 max-w-[720px] mx-auto">
-          <ul className="flex flex-col xs:flex-row gap-1 xs:gap-0 justify-between text-center md:text-left md:text-lg">
+          <ul className="flex flex-col xs:flex-row gap-1 xs:gap-0 justify-between md:text-lg">
             <li>
               <a href="#home">Home</a>
             </li>
