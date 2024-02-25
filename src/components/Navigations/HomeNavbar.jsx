@@ -27,7 +27,7 @@ function HomeNavbar(props) {
         <h1 className="font-bold text-lg">YuhexGlobal</h1>
         <nav>
           {/* Navigation for desktop mode */}
-          <ul className="hidden navRes:flex font-semibold items-center">
+          <ul className="hidden mlg:flex font-semibold items-center">
             <li className="mx-4">
               <Link
                 to="navigation-bar"
@@ -86,7 +86,7 @@ function HomeNavbar(props) {
           {/* Navigation for mobile mode */}
           <div
             onClick={openModal ? "" : showSidebar}
-            className="block navRes:hidden"
+            className="block mlg:hidden"
           >
             <img src={menu} alt="Menu" className="w-8 h-6 cursor-pointer" />
           </div>

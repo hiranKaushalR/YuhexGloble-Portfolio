@@ -4,7 +4,7 @@ import { socialMediaForMenu, contacts } from "../../constants";
 function Footer() {
   return (
     <footer className="bg-primary text-white pt-8">
-      <div className="max-w-[1200px] mx-auto px-4">
+      <div className="mx-[10%] px-[3%]">
         <div className="flex justify-between items-center flex-col sm:flex-row border-b-2">
           <div className="pb-4">
             <h1 className="text-4xl font-bold">YuhexGlobal</h1>
@@ -14,12 +14,12 @@ function Footer() {
             <input
               type="email"
               placeholder="Sign-up for the News and Offers"
-              className="bg-primary text-white px-2 py-1 md:px-4 md:py-2 w-[280px] md:w-[300px] border-white border-solid border  focus:outline-none rounded-t-md xs:rounded-l-md font-roboto"
+              className="bg-primary text-white px-2 py-1 md:px-4 md:py-2 w-[280px] md:w-[300px] border-white border-solid border  focus:outline-none font-roboto radius-input"
             />
             <input
               type="submit"
               value="Sign-Up"
-              className="font-semibold bg-buttonBG px-2 md:px-4 md:py-2  border-buttonBG border-solid border rounded-b-md xs:rounded-r-md cursor-pointer"
+              className="font-semibold bg-buttonBG px-2 md:px-4 md:py-2  border-buttonBG border-solid border radius-button cursor-pointer"
             />
           </form>
         </div>
@@ -72,7 +72,7 @@ function Footer() {
               </div>
             ))}
           </div>
-          <p className="py-0 text-center pt-4">
+          <p className="py-0 text-center pt-4 font-poppins">
             &copy; Copyright YuhexGlobal Alright Reserved
           </p>
         </div>

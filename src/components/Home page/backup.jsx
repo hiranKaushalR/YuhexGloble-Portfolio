@@ -1,189 +1,103 @@
-
 import React from "react";
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { socialMediaForMenu } from "../../constants";
-import { contacts } from "../../constants";
+import { projectDetails } from "../../constants";
+import { link, fillStar, unfillStar } from "../../assets";
+import { NavLink } from "react-router-dom";
 
-function ContactFormWithAnimations({ project, index }) {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [date, setDate] = useState("");
-  const [reason, setReason] = useState("");
-  const [message, setMessage] = useState("");
-  const [showThankMessage, setShowThankMessage] = useState(false);
-
-  // UseState for condition checking
-  const [fillBlanks, setFillBlanks] = useState(null);
-  const [mailCheck, setMailCheck] = useState(null);
-
-  // Destructuring useInView (This is for detecting viewport)
+function ProjectCard({ project, index }) {
   const { ref, inView } = useInView();
-
-  // Getting the today date
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = String(today.getMonth() + 1).padStart(2, "0");
-  const day = String(today.getDate()).padStart(2, "0");
-
-  const formattedDate = `${year}-${month}-${day}`; // get the date in require format
 
   const cardVariants = {
     hidden: {
       opacity: 0,
-      y: index % 3 === 1 ? 100 : 0,
+      x: index % 3 === 0 ? -10 : index % 3 === 1 ? 0 : 10,
+      y: index % 3 === 1 ? 10 : 0,
     },
     visible: {
       opacity: 1,
       x: 0,
       y: 0,
       transition: {
-        duration: 0.7,
+        duration: 0.5,
         ease: "easeInOut",
       },
     },
   };
 
-  useEffect(() => {
-    if (showThankMessage) {
-      const timer = setTimeout(() => {
-        setShowThankMessage(false);
-      }, 3000);
-
-      return () => clearTimeout(timer);
+  function renderStars(rating) {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        stars.push(
+          <img key={i} src={fillStar} alt="filled star" className="w-5" />
+        );
+      } else {
+        stars.push(
+          <img key={i} src={unfillStar} alt="unfilled star" className="w-5" />
+        );
+      }
     }
-  }, [showThankMessage]);
-
-  function handleMessageChange(event) {
-    setMessage(event.target.value);
-  }
-
-  function handleContactSubmit() {
-    // Checking for blank spaces
-    if (!name || !email || !date || !reason || !message) {
-      setFillBlanks("Please fill in all fields");
-      setMailCheck(null);
-      return;
-    }
-
-    // Checking if email is in the right syntax
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setMailCheck("Please insert a valid email.");
-      setFillBlanks(null);
-      return;
-    }
-
-    // If all conditions are met, set appointment made to true
-    console.log("Form submitted successfully!");
-    setShowThankMessage(true);
-    setFillBlanks(null);
-    setMailCheck(null);
+    return stars;
   }
 
   return (
     <motion.div
-      className="bg-formBG rounded-lg"
       ref={ref}
       variants={cardVariants}
+      className="flex flex-wrap mx-[10%] gap-5"
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
     >
-      {!showThankMessage && (
-        <div className="rounded-lg flex justify-center items-center">
-          <div className="">
-            <h1 className="text-white text-lg md:text-3xl pb-3 md:pb-6">
-              Let's Work Well Together
-            </h1>
-            <form className="flex items-stretch flex-col gap-2 text-sm w-full">
-              <input
-                type="text"
-                className="bg-formBG border border-formBorder rounded-md px-4 py-1 text-white  focus:outline-none"
-                placeholder="Name"
-                onChange={(event) => setName(event.target.value)}
-              />
-              <input
-                type="email"
-                className="bg-formBG border border-formBorder rounded-md px-4 py-1 text-white  focus:outline-none "
-                placeholder="Email"
-                onChange={(event) => setEmail(event.target.value)}
-              />
-
-              {mailCheck && <p className="text-[#FF0000]">{mailCheck}</p>}
-              <div className="flex  gap-2 md:gap-5">
-                <input
-                  type="date"
-                  className="bg-formBG border border-formBorder rounded-md px-4 py-1 text-white  focus:outline-none"
-                  onChange={(event) => setDate(event.target.value)}
-                  min={formattedDate}
-                />
-                <input
-                  type="text"
-                  placeholder="Reason"
-                  className="bg-formBG border border-formBorder rounded-md px-4 py-1 text-white  focus:outline-none"
-                  onChange={(event) => setReason(event.target.value)}
-                />
-              </div>
-              <textarea
-                type="text"
-                className="bg-formBG border border-formBorder rounded-md px-4 py-1 text-white  h-[100px] resize-none  focus:outline-none "
-                placeholder="Message"
-                onChange={handleMessageChange}
-              />
-              {fillBlanks && <p className="text-[#FF0000]">{fillBlanks}</p>}
-              <input
-                type="button"
-                value="Send"
-                className="bg-formBorder rounded-md px-4 py-1 cursor-pointer"
-                onClick={handleContactSubmit}
-              />
-            </form>
-          </div>
-          <div className=" hidden md:flex justify-between flex-col gap-5">
-            <h1 className="text-center text-white">Get In Touch</h1>
-            <div className="flex gap-10 m-auto items-center">
-              {socialMediaForMenu.map((socialmedia) => (
-                <div id={socialmedia.id}>
-                  <a target="_blank" href={socialmedia.link}>
-                    <img
-                      src={socialmedia.icon}
-                      alt={socialmedia.id}
-                      className="w-7"
-                    />
-                  </a>
-                </div>
-              ))}
-            </div>
-            <div className="text-white flex flex-col justify-between">
-              {contacts.map((contact) => (
-                <div>
-                  <h1 className="text-center">{contact.source}</h1>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-      {showThankMessage && (
-        <div className="font-bold text-3xl text-white text-center mx-auto py-10">
-          <h1 className="py-2">Thank you for contacting us</h1>
-          <h1 className="py-2">We will reach to you soon enough</h1>
-          <h1 className="text-xl py-8 font-semibold">TEAM YUHEXGLOBLE </h1>
-        </div>
-      )}
+     <div className="hidden ssmd:block bg-cardBG text-black w-[300px] rounded-lg p-1 m-auto my-6">
+     <h1 className="text-center py-1 text-xl capitalize font-semibold">
+        {project.projectName}
+      </h1>
+      <img src={project.image} alt="" />
+      <div className="flex justify-center gap-1 py-2">
+        {renderStars(project.rating)}
+      </div>
+      <p className="text-center">Ordered by: {project.client}</p>
+      <img
+        src={link}
+        alt="link"
+        className="rotate-45 flex justify-end float-end"
+      />
+     </div>
+     <div className="block ssmd:hidden bg-cardBG text-Black rounded-lg p-1 m-auto min-w-[300px] w-full ssmd:w-[40%] my-2 ssmd:my-8">
+     <div className="flex  items-center w-full h-[100px] gap-5">
+        <img src={service.image} alt={service.id} className="rounded-lg h-full bg-cover" />
+        <h1 className="font-bold text-lg py-1">{service.topic}</h1>
+      </div>
+     </div>
     </motion.div>
   );
 }
 
-function Contact() {
+function Projects() {
   return (
-    <section id="contact" className="w-full mx-auto">
-      <div className="container w-full mx-auto">
-        <ContactFormWithAnimations />
+    <div className="my-12 w-full" id="project">
+      <div className="pb-2 text-center ">
+        <h1 className="text-4xl font-semibold">Latest of us</h1>
+        <h1 className="text-lg capitalize font-poppins">
+          most recent projects of YuhexGloble's
+        </h1>
       </div>
-    </section>
+      <div className="">
+        {projectDetails.map((project, index) => (
+          <ProjectCard key={project.id} project={project} index={index} />
+        ))}
+      </div>
+      <div class="flex justify-center">
+        <NavLink to="/project">
+          {" "}
+          <button class="border-2 border-cardBG font-semibold py-2 px-8 rounded-lg text-xl">
+            See More
+          </button>
+        </NavLink>
+      </div>
+    </div>
   );
 }
 
-export default Contact;
+export default Projects;

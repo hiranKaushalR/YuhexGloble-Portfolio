@@ -16,8 +16,11 @@ export default {
         xxs: "400px",
         xs: "565px",
         smd: "700px",
+        ssmd: "800px",
         navRes: "860px",
-        cardRes: "880px",
+        cardRes: "880px", 
+        lmd: '945px',
+        mlg:"1100px"
       },
       fontFamily: {
         poppins: ['"Poppins"',  ...defaultTheme.fontFamily.sans],

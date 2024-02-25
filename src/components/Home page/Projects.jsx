@@ -44,20 +44,44 @@ function ProjectCard({ project, index }) {
   return (
     <motion.div
       ref={ref}
-      className={`bg-cardBG text-black max-w-[350px]  cardRes:w-[280px] lg:w-[320px] rounded-lg p-1 m-auto my-6`}
+      className={`bg-cardBG text-black w-full ssmd:w-[300px] rounded-lg p-1 m-auto my-2 ssmd:my-6`}
       variants={cardVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
     >
-      <h1 className="text-center py-1 text-xl capitalize font-semibold">
-        {project.projectName}
-      </h1>
-      <img src={project.image} alt="" />
-      <div className="flex justify-center gap-1 py-2">
-        {renderStars(project.rating)}
+      <div className="hidden ssmd:block">
+        <h1 className="text-center py-1 text-xl capitalize font-semibold">
+          {project.projectName}
+        </h1>
+        <img src={project.image} alt="" />
+        <div className="flex justify-center gap-1 py-2">
+          {renderStars(project.rating)}
+        </div>
+        <p className="text-center">Ordered by: {project.client}</p>
+        <img
+          src={link}
+          alt="link"
+          className="rotate-45 flex justify-end float-end"
+        />
       </div>
-      <p className="text-center">Ordered by: {project.client}</p>
-      <img src={link} alt="link" className="rotate-45 flex justify-end float-end" />
+      <div className="flex ssmd:hidden  items-center w-full h-[220px] gap-5">
+        <div className="w-2/4">
+        <img
+          src={project.image}
+          alt={service.id}
+          className="rounded-lg w-full bg-cover"
+        />
+        </div>
+        <div >
+          <h1 className="font-bold text-lg py-1">{project.projectName}</h1>
+          <h1 className="font-bold text-lg py-1">Order by :{project.client}</h1>
+          <div>
+          <div className="flex justify-center gap-x-4">
+            {renderStars(project.rating)}
+          </div>
+          </div>
+        </div>
+      </div>
     </motion.div>
   );
 }
@@ -71,15 +95,18 @@ function Projects() {
           most recent projects of YuhexGloble's
         </h1>
       </div>
-      <div className="flex flex-wrap mx-[10%]">
+      <div className="flex flex-wrap mx-[10%] gap-5">
         {projectDetails.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>
       <div class="flex justify-center">
-      <NavLink to='/project'>  <button class="border-2 border-cardBG font-semibold py-2 px-8 rounded-lg text-xl">
-          See More
-        </button></NavLink>
+        <NavLink to="/project">
+          {" "}
+          <button class="border-2 border-cardBG font-semibold py-2 px-8 rounded-lg text-xl">
+            See More
+          </button>
+        </NavLink>
       </div>
     </div>
   );

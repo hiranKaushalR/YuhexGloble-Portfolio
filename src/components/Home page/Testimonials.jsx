@@ -72,7 +72,7 @@ function TestimonialsWithAnimations({ service, index }) {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 100000,
     pauseOnHover: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -80,22 +80,22 @@ function TestimonialsWithAnimations({ service, index }) {
 
   return (
     <motion.div
-      className="my-24 px-2 w md:px-4 flex flex-col-reverse md:flex-row items-center justify-evenly h-[300px]"
+      className="my-24   w-full md:px-4 flex flex-col-reverse mlg:flex-row items-center justify-evenly "
       ref={ref}
       variants={cardVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
     >
-      <div className="w-[40%]  mx-auto md:mx-0">
+      <div className="w-full mlg:w-[40%] px-[10%] mlg:px-0 mx-auto md:mx-0">
         <Slider {...settings}>
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-cardBG text-black rounded-xl py-2 h-[300px] "
+              className="bg-cardBG text-black rounded-xl py-2 h-[320px] "
             >
               
-              <div className="items-center justify-between border-b-2 border-customRed pb-4 pr-5">
-                <div className="flex items-center gap-1">
+              <div className="items-center justify-between border-b-2 border-customRed pb-4 px-[3%]">
+                <div className="flex items-center  gap-1">
                   <img
                     src={testimonial.avatar}
                     alt="avatar"
@@ -107,10 +107,10 @@ function TestimonialsWithAnimations({ service, index }) {
                     </h1>
                     <h3 className="text-sm p-0 font-roboto">{testimonial.jobTitle}</h3>
                   </div>
-                  <div className="flex gap-x-1">{renderStars(testimonial.rating)}</div>
+                  <div className="flex gap-x-1 pr-10">{renderStars(testimonial.rating)}</div>
                 </div>
               </div>
-              <div className="text-justify p-1 pt-2">
+              <div className="text-justify px-[5%] pt-2">
                 {testimonial.comment}
               </div>
               </div>
@@ -119,7 +119,7 @@ function TestimonialsWithAnimations({ service, index }) {
         </Slider>
       </div>
       <h1 className="font-bold text-center text-4xl pb-8">
-        Client <br className="hidden md:block" /> Testimonials
+        Client <br className="hidden mlg:block" /> Testimonials
       </h1>
     </motion.div>
   );

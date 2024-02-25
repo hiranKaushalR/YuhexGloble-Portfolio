@@ -18,7 +18,7 @@ function AboutBody() {
         <div className="flex flex-wrap-reverse items-center justify-between w-full">
           <div className="flex flex-wrap items-center justify-between gap-10 w-full">
             <div className="w-[45%]">
-              <img src={about} alt="" className="w-full  h-[585px] bg-cover" />
+              <img src={about} alt="" className="w-full bg-cover" />
               <h1 className="text-3xl font-semibold">Our Mission</h1>
               <p>
                 Worem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
