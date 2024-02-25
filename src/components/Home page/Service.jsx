@@ -41,9 +41,9 @@ function ServiceCard({ service, index }) {
 
 function Service() {
   return (
-    <div className="my-4" id="service">
-      <h1 className="font-bold text-center text-4xl py-8">Our Services</h1>
-      <div className="flex flex-wrap mx-[10%] ">
+    <div className="my-10" >
+      <h1 className="font-bold text-center text-4xl py-12" id="service">Our Services</h1>
+      <div className="flex flex-wrap mx-[10%] font-poppins">
         {serviceDetails.map((service, index) => (
           <ServiceCard key={service.id} service={service} index={index} />
         ))}

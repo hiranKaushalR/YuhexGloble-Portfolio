@@ -5,7 +5,7 @@ function AboutTeam() {
   return (
     <div className="text-white">
       <h1 className="text-3xl  font-bold text-center py-6">Meet the Team</h1>
-      <div className="flex flex-wrap justify-center items-center gap-10">
+      <div className="flex flex-wrap justify-center items-center gap-5">
         {team.map((member) => (
           <div
             id={member.id}
@@ -14,7 +14,7 @@ function AboutTeam() {
             <img
               src={member.avatar}
               alt="avatar"
-              className="w-[250px] rounded-lg bg-cover"
+              className="w-[230px] rounded-lg bg-cover"
             />
             <div>
               <h1 className="font-semibold text-xl">{member.name}</h1>

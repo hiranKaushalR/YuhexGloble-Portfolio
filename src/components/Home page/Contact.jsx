@@ -156,7 +156,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="flex gap-5 justify-between items-center self-center px-14 py-10 mt-16 max-w-full text-white bg-formBG rounded-[30px] w-[1194px] max-md:flex-wrap my-10 max-md:px-5 max-md:mt-10 mx-auto"
+      className="flex gap-5 justify-between items-center self-center px-14 py-10 mt-16 max-w-full text-white bg-formBG rounded-[30px] max-md:flex-wrap my-10 max-md:px-5 max-md:mt-10 mx-[10%]"
     >
       <ContactFormWithAnimations />
     </section>

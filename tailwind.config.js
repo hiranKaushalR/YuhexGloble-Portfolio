@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -18,6 +19,9 @@ export default {
         navRes: "860px",
         cardRes: "880px",
       },
+      fontFamily: {
+        poppins: ['"Poppins"',  ...defaultTheme.fontFamily.sans]
+      }
     },
   },
   plugins: [],

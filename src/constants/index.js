@@ -23,6 +23,8 @@ import { webDevelopment, seoOptimization, digitalMarketing } from "../assets";
 
 import { getInFitnessClub, harboursidePlaza, luxuryGateways } from "../assets";
 
+import { webdev, softdev, appdev } from "../assets"
+
 // Change the links and other info here
 const facebookLink = "https://www.facebook.com/";
 const instagramLink = "https://www.instagram.com/";
@@ -135,7 +137,7 @@ export const serviceDetails = [
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim architecto incidunt at ipsum, dicta, distinctio quidem, nulla vitae voluptatem quisquam recusandae soluta amet ducimus quos...",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti et recusandae magni nobis ratione vel eos maiores repudiandae? Cumque a accusantium quasi laudantium alias doloribus odit, fugit, repudiandae rerum, itaque doloremque aliquam! A omnis, deleniti maiores et ipsum quia corporis recusandae esse tempore sapiente perspiciatis quas laudantium illo velit culpa voluptates, consequuntur hic nulla laborum. Minus perferendis dolore corporis deserunt accusamus distinctio hic explicabo possimus enim ducimus voluptatem ad aspernatur magni in quo, atque laboriosam quaerat, sed itaque facilis, qui aliquid animi. Aspernatur provident voluptas, ipsa aliquid facere dolore similique soluta repellat voluptate vel rem totam. Sint aliquam, veritatis nulla asperiores vero, dolores error possimus quidem at mollitia rem? Numquam, quos voluptates impedit maiores magnam obcaecati inventore libero optio odit incidunt sunt ad ratione, cumque necessitatibus nobis fuga at illum? Aliquam, obcaecati? Aperiam provident sed placeat assumenda autem eligendi quam officia dolor? Provident, ullam. Facilis, unde quisquam harum soluta magnam voluptate itaque tempora architecto est ut tempore tenetur neque recusandae in ad mollitia iusto veniam? Dolor velit quaerat repudiandae autem rem veniam possimus delectus facilis, earum expedita harum eligendi dolores neque illum animi repellat exercitationem distinctio maiores tempore cumque sequi impedit. Ab vel possimus vero veniam perferendis voluptas totam qui adipisci rerum aperiam illum temporibus error fugiat, eveniet illo officia iure maxime ratione dolores! Cupiditate tempora explicabo ex ad amet fuga sed, minima eius ab saepe quas ipsum earum adipisci dolorum officia illum itaque repellat ea porro recusandae cum! Perspiciatis, exercitationem illum veritatis molestiae fuga nihil aliquid autem? Eligendi, dicta.",
-    image: webDevelopment,
+    image: webdev,
   },
   {
     id: "software-dev",
@@ -144,7 +146,7 @@ export const serviceDetails = [
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim architecto incidunt at ipsum, dicta, distinctio quidem, nulla vitae voluptatem quisquam recusandae soluta amet ducimus quos...",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti et recusandae magni nobis ratione vel eos maiores repudiandae? Cumque a accusantium quasi laudantium alias doloribus odit, fugit, repudiandae rerum, itaque doloremque aliquam! A omnis, deleniti maiores et ipsum quia corporis recusandae esse tempore sapiente perspiciatis quas laudantium illo velit culpa voluptates, consequuntur hic nulla laborum. Minus perferendis dolore corporis deserunt accusamus distinctio hic explicabo possimus enim ducimus voluptatem ad aspernatur magni in quo, atque laboriosam quaerat, sed itaque facilis, qui aliquid animi. Aspernatur provident voluptas, ipsa aliquid facere dolore similique soluta repellat voluptate vel rem totam. Sint aliquam, veritatis nulla asperiores vero, dolores error possimus quidem at mollitia rem? Numquam, quos voluptates impedit maiores magnam obcaecati inventore libero optio odit incidunt sunt ad ratione, cumque necessitatibus nobis fuga at illum? Aliquam, obcaecati? Aperiam provident sed placeat assumenda autem eligendi quam officia dolor? Provident, ullam. Facilis, unde quisquam harum soluta magnam voluptate itaque tempora architecto est ut tempore tenetur neque recusandae in ad mollitia iusto veniam? Dolor velit quaerat repudiandae autem rem veniam possimus delectus facilis, earum expedita harum eligendi dolores neque illum animi repellat exercitationem distinctio maiores tempore cumque sequi impedit. Ab vel possimus vero veniam perferendis voluptas totam qui adipisci rerum aperiam illum temporibus error fugiat, eveniet illo officia iure maxime ratione dolores! Cupiditate tempora explicabo ex ad amet fuga sed, minima eius ab saepe quas ipsum earum adipisci dolorum officia illum itaque repellat ea porro recusandae cum! Perspiciatis, exercitationem illum veritatis molestiae fuga nihil aliquid autem? Eligendi, dicta.",
-    image: seoOptimization,
+    image: softdev,
   },
   {
     id: "app-dev",
@@ -153,7 +155,7 @@ export const serviceDetails = [
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim architecto incidunt at ipsum, dicta, distinctio quidem, nulla vitae voluptatem quisquam recusandae soluta amet ducimus quos...",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti et recusandae magni nobis ratione vel eos maiores repudiandae? Cumque a accusantium quasi laudantium alias doloribus odit, fugit, repudiandae rerum, itaque doloremque aliquam! A omnis, deleniti maiores et ipsum quia corporis recusandae esse tempore sapiente perspiciatis quas laudantium illo velit culpa voluptates, consequuntur hic nulla laborum. Minus perferendis dolore corporis deserunt accusamus distinctio hic explicabo possimus enim ducimus voluptatem ad aspernatur magni in quo, atque laboriosam quaerat, sed itaque facilis, qui aliquid animi. Aspernatur provident voluptas, ipsa aliquid facere dolore similique soluta repellat voluptate vel rem totam. Sint aliquam, veritatis nulla asperiores vero, dolores error possimus quidem at mollitia rem? Numquam, quos voluptates impedit maiores magnam obcaecati inventore libero optio odit incidunt sunt ad ratione, cumque necessitatibus nobis fuga at illum? Aliquam, obcaecati? Aperiam provident sed placeat assumenda autem eligendi quam officia dolor? Provident, ullam. Facilis, unde quisquam harum soluta magnam voluptate itaque tempora architecto est ut tempore tenetur neque recusandae in ad mollitia iusto veniam? Dolor velit quaerat repudiandae autem rem veniam possimus delectus facilis, earum expedita harum eligendi dolores neque illum animi repellat exercitationem distinctio maiores tempore cumque sequi impedit. Ab vel possimus vero veniam perferendis voluptas totam qui adipisci rerum aperiam illum temporibus error fugiat, eveniet illo officia iure maxime ratione dolores! Cupiditate tempora explicabo ex ad amet fuga sed, minima eius ab saepe quas ipsum earum adipisci dolorum officia illum itaque repellat ea porro recusandae cum! Perspiciatis, exercitationem illum veritatis molestiae fuga nihil aliquid autem? Eligendi, dicta.",
-    image: digitalMarketing,
+    image: appdev,
   },
 ];
 

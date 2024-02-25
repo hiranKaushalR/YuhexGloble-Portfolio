@@ -57,7 +57,7 @@ function ProjectCard({ project, index }) {
         {renderStars(project.rating)}
       </div>
       <p className="text-center">Ordered by: {project.client}</p>
-      <img src={link} alt="link" className="rotate-45" />
+      <img src={link} alt="link" className="rotate-45 flex justify-end float-end" />
     </motion.div>
   );
 }
@@ -77,9 +77,9 @@ function Projects() {
         ))}
       </div>
       <div class="flex justify-center">
-        <button class="border-2 border-cardBG font-semibold py-2 px-8 rounded-lg text-xl">
-          <NavLink to='/project'>See More</NavLink>
-        </button>
+      <NavLink to='/project'>  <button class="border-2 border-cardBG font-semibold py-2 px-8 rounded-lg text-xl">
+          See More
+        </button></NavLink>
       </div>
     </div>
   );

@@ -39,6 +39,11 @@ import clockTicking from './clock-ticking.json'
 import blogCover from './blog-cover.jpg'
 import nopageError from './404-error.svg'
 
+import webdev from './web-dev.jpg'
+import softdev from './software-dev.svg'
+import appdev from './app-dev.jpg'
+import vision from './vision.svg'
+
 export {
   css,
   email,
@@ -74,3 +79,6 @@ export {
 export { webDevelopment, seoOptimization, digitalMarketing };
 
 export { getInFitnessClub, harboursidePlaza, luxuryGateways };
+
+export {webdev, softdev, appdev, vision}
+

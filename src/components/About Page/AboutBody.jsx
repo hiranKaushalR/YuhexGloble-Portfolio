@@ -3,8 +3,8 @@ import { aboutPage } from "../../assets";
 
 function AboutWhoAreWe() {
   return (
-    <div className="relative z-30 py-12  flex flex-wrap justify-evenly items-center">
-      <div className="w-2/4 min-w-[500px]">
+    <div className="relative z-30 py-12  flex flex-wrap justify-evenly gap-6 items-center">
+      <div className="w-2/4 min-w-[280px]">
         <h1 className="text-white text-3xl  font-bold">Who Are We ?</h1>
         <p className="text-justify ">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
