@@ -9,7 +9,7 @@ import AllHome from "./components/Home page/AllHome";
 import Footer from "./components/Home page/Footer";
 import ProjectBody from "./components/Project Page/ProjectBody";
 import BlogBody from "./components/Blog Page/BlogBody";
-import AboutBody from "./components/About Page/AboutBody";
+import AboutMain from "./components/About Page/AboutMain";
 import ContactBody from "./components/Contact Page/ContactBody";
 
 import "./App.scss";
@@ -89,7 +89,7 @@ function App() {
         />
         <Route path="/project" element={<ProjectBody />} />
         <Route path="/blogs" element={<BlogBody />} />
-        <Route path="/about" element={<AboutBody />} />
+        <Route path="/about" element={<AboutMain />} />
         <Route path="/contact" element={<ContactBody />} />
         <Route path="*" element={<NoPage/>} />
       </Routes>

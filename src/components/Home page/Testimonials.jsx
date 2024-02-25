@@ -68,7 +68,7 @@ function TestimonialsWithAnimations({ service, index }) {
   var settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -80,16 +80,20 @@ function TestimonialsWithAnimations({ service, index }) {
 
   return (
     <motion.div
-      className="my-24 px-2 w md:px-4 flex flex-col-reverse md:flex-row items-center justify-evenly"
+      className="my-24 px-2 w md:px-4 flex flex-col-reverse md:flex-row items-center justify-evenly h-[300px]"
       ref={ref}
       variants={cardVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
     >
-      <div className="max-w-[500px] mx-auto md:mx-0">
+      <div className="w-[40%]  mx-auto md:mx-0">
         <Slider {...settings}>
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-cardBG text-black rounded-xl py-2">
+            <div
+              key={index}
+              className="bg-cardBG text-black rounded-xl py-2 h-[300px] "
+            >
+              
               <div className="items-center justify-between border-b-2 border-customRed pb-4 pr-5">
                 <div className="flex items-center gap-1">
                   <img
@@ -106,8 +110,11 @@ function TestimonialsWithAnimations({ service, index }) {
                   <div className="flex">{renderStars(testimonial.rating)}</div>
                 </div>
               </div>
-              <div className="text-justify p-1 pt-2">{testimonial.comment}</div>
-            </div>
+              <div className="text-justify p-1 pt-2">
+                {testimonial.comment}
+              </div>
+              </div>
+          
           ))}
         </Slider>
       </div>

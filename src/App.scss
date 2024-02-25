@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Times New Roman', sans-serif;
+  font-family: "Times New Roman", sans-serif;
 }
 
 .sidebar {
@@ -16,7 +16,6 @@ body {
   z-index: 999;
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba (0, 0, 0, 0.1);
-
 
   li {
     width: 100%;
@@ -29,7 +28,6 @@ body {
   a {
     width: 100%;
   }
-
 }
 
 .slick-slide {
@@ -39,7 +37,7 @@ body {
 }
 
 .about-contact-bg {
-  background-color: #59E3F5;
+  background-color: #59e3f5;
 }
 
 .btn-modal {
@@ -49,7 +47,8 @@ body {
   font-size: 18px;
 }
 
-.modal, .overlay {
+.modal,
+.overlay {
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -60,7 +59,7 @@ body {
 }
 
 .overlay {
-  background: rgba(49,49,49,0.8);
+  background: rgba(49, 49, 49, 0.8);
 }
 .modal-content {
   position: absolute;
@@ -82,9 +81,8 @@ body {
   padding: 5px 7px;
 }
 
-
 @font-face {
-  font-family: 'Times New Roman';
+  font-family: "Times New Roman";
   src: url(/times\ new\ roman.ttf);
 }
 
@@ -96,4 +94,8 @@ body {
 
 .no-spinners {
   -moz-appearance: textfield;
+}
+
+.container {
+  padding: 2% 12%;
 }

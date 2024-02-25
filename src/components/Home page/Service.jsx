@@ -26,15 +26,15 @@ function ServiceCard({ service, index }) {
   return (
     <motion.div
       ref={ref}
-      className="bg-cardBG text-Black text-justify rounded-lg p-1 my-6 cardRes:my-0 m-auto w-[300px]  cardRes:w-[280px] lg:w-[320px]"
+      className="bg-cardBG text-Black text-justify rounded-lg p-1 m-auto w-[40%] my-8"
       variants={cardVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
     >
-      <img src={service.image} alt={service.id} className="rounded-lg" />
-      <h1 className="font-bold text-lg py-1">{service.topic}</h1>
-      <p>{service.summary}</p>
-      <p className="text-right font-semibold cursor-pointer">Read more {'>>>'}</p>
+      <div className="flex items-center w-full h-[100px] gap-5">
+        <img src={service.image} alt={service.id} className="rounded-lg h-full bg-cover" />
+        <h1 className="font-bold text-lg py-1">{service.topic}</h1>
+      </div>
     </motion.div>
   );
 }
@@ -43,7 +43,7 @@ function Service() {
   return (
     <div className="my-4" id="service">
       <h1 className="font-bold text-center text-4xl py-8">Our Services</h1>
-      <div className="cardRes:flex justify-between">
+      <div className="flex flex-wrap mx-[10%] ">
         {serviceDetails.map((service, index) => (
           <ServiceCard key={service.id} service={service} index={index} />
         ))}

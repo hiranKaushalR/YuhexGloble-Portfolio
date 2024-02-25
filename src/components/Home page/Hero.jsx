@@ -46,14 +46,14 @@ function Hero(props) {
   // Rendering Technology Icons
   const technologyIcons = technologies.map((tech) => (
     <div id={tech.id}>
-      <img src={tech.icon} alt={tech.id} className="w-8 xxs:w-12 sm:w-10 md:w-12" />
+      <img src={tech.icon} alt={tech.id} className="w-8 xxs:w-12 sm:w-10 md:w-14" />
     </div>
   ));
   return (
     <section className=" bg-primary text-white px-6" id="navigation-bar">
-      <div className="flex items-center justify-evenly flex-col text-center p-0 max-w-[1200px]  m-auto h-screen animate__animated animate__slideInUp">
+      <div className="flex items-center justify-evenly flex-col text-center p-0 m-auto h-screen mx-[10%]">
         <div className="flex justify-between items-center flex-col">
-          <h1 className="capitalize text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl pb-6">
+          <h1 className="capitalize text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mx-[2%] pb-6 mt-10">
             let's construct your high performance, professionally designed
             website.
           </h1>
@@ -71,7 +71,7 @@ function Hero(props) {
             </Link>
           </div>
         </div>
-        <div className="sm:flex hidden justify-between w-full">
+        <div className="sm:flex hidden justify-center gap-[8%] w-full">
           {technologyIcons}
         </div>
         <Slider {...settings} className="flex sm:hidden justify-between w-full">

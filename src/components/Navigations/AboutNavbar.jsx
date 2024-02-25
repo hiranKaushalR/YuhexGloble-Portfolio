@@ -20,8 +20,8 @@ function AboutNavbar(props) {
   }
 
   return (
-    <header className="bg-formBG text-white sticky top-0 z-50" id="navigation-bar">
-      <div className="flex justify-between items-center mx-auto">
+    <header className="bg-formBG text-white sticky top-0 z-50 py-10" id="navigation-bar">
+      <div className="flex justify-between items-center mx-auto  px-[14%]">
         <h1 className="font-bold text-lg">YuhexGloble</h1>
         <nav>
           {/* Navigation for desktop mode */}

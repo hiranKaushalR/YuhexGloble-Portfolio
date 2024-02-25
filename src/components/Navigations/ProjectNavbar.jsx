@@ -5,7 +5,6 @@ import menu from "../../assets/Menu.png";
 import close from "../../assets/close.png";
 import { socialMediaForMenu } from "../../constants";
 import { NavLink } from "react-router-dom";
-import { Link } from "react-scroll";
 
 function ProjectNavbar(props) {
   const [toggleSidebar, setToggleSidebar] = useState(false);
@@ -23,8 +22,8 @@ function ProjectNavbar(props) {
   }
 
   return (
-    <header className="bg-primary text-white sticky top-0 z-50">
-      <div className="flex justify-between items-center mx-auto">
+    <header className="bg-primary text-white sticky top-0 z-50  py-10">
+      <div className="flex justify-between items-center mx-auto  px-[14%]">
         <h1 className="font-bold text-lg">YuhexGloble</h1>
         <nav>
           {/* Navigation for desktop mode */}

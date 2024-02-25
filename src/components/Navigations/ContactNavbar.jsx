@@ -22,8 +22,8 @@ function ContactNavbar(props) {
   }
 
   return (
-    <header className="bg-buttonBG text-white sticky top-0 z-50">
-      <div className="flex justify-between items-center mx-auto">
+    <header className="bg-buttonBG text-white sticky top-0 z-50 py-10">
+      <div className="flex justify-between items-center mx-auto px-[14%]">
         <h1 className="font-bold text-lg">YuhexGloble</h1>
         <nav>
           {/* Navigation for desktop mode */}

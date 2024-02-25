@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { projectDetails } from "../../constants";
 import { link, fillStar, unfillStar } from "../../assets";
+import { NavLink } from "react-router-dom";
 
 function ProjectCard({ project, index }) {
   const { ref, inView } = useInView();
@@ -63,19 +64,23 @@ function ProjectCard({ project, index }) {
 
 function Projects() {
   return (
-    <div className="my-12" id="project">
+    <div className="my-12 w-full" id="project">
       <div className="pb-2 text-center ">
         <h1 className="text-4xl font-semibold">Latest of us</h1>
         <h1 className="text-lg capitalize">
           most recent projects of YuhexGloble's
         </h1>
       </div>
-      <div className="flex flex-col cardRes:flex-row">
+      <div className="flex flex-wrap mx-[10%]">
         {projectDetails.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>
-      <button className="px-6 py-2 rounded-xl border border-primary text-center">SEE MORE</button>
+      <div class="flex justify-center">
+        <button class="border-2 border-cardBG font-semibold py-2 px-8 rounded-lg text-xl">
+          <NavLink to='/project'>See More</NavLink>
+        </button>
+      </div>
     </div>
   );
 }

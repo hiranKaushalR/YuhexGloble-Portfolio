@@ -1,25 +1,26 @@
-import React from 'react'
-import Hero from './Hero'
-import Service from './Service'
-import Projects from './Projects'
-import Testimonials from './Testimonials'
-import Contact from './Contact'
-
+import React from "react";
+import Hero from "./Hero";
+import Service from "./Service";
+import Projects from "./Projects";
+import Testimonials from "./Testimonials";
+import Contact from "./Contact";
+import About from "./About";
 
 function AllHome(props) {
   const openModal = props.openModal;
   const setOpenModal = props.setOpenModal;
 
-
   return (
     <div>
-        <Hero  openModal={openModal} setOpenModal={setOpenModal}/>
-        <Service />
-        <Projects />
-        <Testimonials />
-        <Contact />
+      <Hero openModal={openModal} setOpenModal={setOpenModal} />
+      <Service />
+      <Projects />
+      <About />
+      <Testimonials />
+
+      <Contact />
     </div>
-  )
+  );
 }
 
-export default AllHome
+export default AllHome;

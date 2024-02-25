@@ -129,7 +129,7 @@ export const contacts = [
 
 export const serviceDetails = [
   {
-    id: "web-development",
+    id: "web-dev",
     topic: "Web Design & Development",
     summary:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim architecto incidunt at ipsum, dicta, distinctio quidem, nulla vitae voluptatem quisquam recusandae soluta amet ducimus quos...",
@@ -138,8 +138,8 @@ export const serviceDetails = [
     image: webDevelopment,
   },
   {
-    id: "seo-optimization",
-    topic: "SEO Optimization",
+    id: "software-dev",
+    topic: "Software Development",
     summary:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim architecto incidunt at ipsum, dicta, distinctio quidem, nulla vitae voluptatem quisquam recusandae soluta amet ducimus quos...",
     description:
@@ -147,8 +147,8 @@ export const serviceDetails = [
     image: seoOptimization,
   },
   {
-    id: "digital-marketing",
-    topic: "Digital Marketing",
+    id: "app-dev",
+    topic: "App Development",
     summary:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim architecto incidunt at ipsum, dicta, distinctio quidem, nulla vitae voluptatem quisquam recusandae soluta amet ducimus quos...",
     description:
@@ -234,3 +234,53 @@ export const testimonials = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit nulla natus quod, saepe et totam architecto doloremque deleniti voluptatem eos hic temporibus, suscipit praesentium omnis magni voluptate! Non eveniet aliquid quam distinctio aut excepturi a molestias, commodi deleniti, corrupti autem esse at, qui officiis voluptatum! Vitae temporibus soluta ipsum!",
   },
 ];
+
+export const summary = [
+  {
+    id: 1,
+    topic: 'Happy Customers',
+    count: 20
+  },
+  {
+    id: 2,
+    topic: 'Website Developments',
+    count: 6
+  },
+  {
+    id: 3,
+    topic: 'Software Developments',
+    count: 3
+  },
+  {
+    id: 4,
+    topic: 'Application Developments',
+    count: 2
+  }
+]
+
+export const team = [
+  {
+    id: 1,
+    name: 'Induwara',
+    role: 'Back-End Developer',
+    avatar: sampleAvatar
+  },
+  {
+    id: 2,
+    name: 'MR Gune',
+    role: 'Back-End Developer',
+    avatar: sampleAvatar
+  },
+  {
+    id: 3,
+    name: 'Hiran Kaushal',
+    role: 'Front-End Developer',
+    avatar: sampleAvatar
+  },
+  {
+    id: 4,
+    name: 'Poorna',
+    role: 'UI/UX Designer',
+    avatar: sampleAvatar
+  },
+]
