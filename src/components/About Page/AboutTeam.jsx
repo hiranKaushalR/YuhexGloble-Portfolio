@@ -3,7 +3,7 @@ import { team } from "../../constants";
 
 function AboutTeam() {
   return (
-    <div className="text-white">
+    <div className="text-black">
       <h1 className="text-3xl  font-bold text-center py-6">Meet the Team</h1>
       <div className="flex flex-wrap justify-center items-center gap-5">
         {team.map((member) => (
