@@ -80,7 +80,7 @@ function TestimonialsWithAnimations({ service, index }) {
 
   return (
     <motion.div
-      className="my-24   w-full md:px-4 flex flex-col-reverse mlg:flex-row items-center justify-evenly "
+      className="my-24 text  w-full md:px-4 flex flex-col-reverse mlg:flex-row items-center justify-evenly "
       ref={ref}
       variants={cardVariants}
       initial="hidden"
@@ -102,15 +102,15 @@ function TestimonialsWithAnimations({ service, index }) {
                     className="rounded-full w-16"
                   />
                   <div className="relative w-full">
-                    <h1 className="text-lg p-0 font-semibold">
+                    <h1 className="text-sm p-0 font-semibold">
                       {testimonial.name}
                     </h1>
-                    <h3 className="text-sm p-0 font-roboto">{testimonial.jobTitle}</h3>
+                    <h3 className="text-xs p-0 font-roboto">{testimonial.jobTitle}</h3>
                   </div>
                   <div className="flex gap-x-1 pr-10">{renderStars(testimonial.rating)}</div>
                 </div>
               </div>
-              <div className="text-justify px-[5%] pt-2">
+              <div className="text-justify text-sm px-[5%] pt-2">
                 {testimonial.comment}
               </div>
               </div>

@@ -44,7 +44,7 @@ function ProjectCard({ project, index }) {
   return (
     <motion.div
       ref={ref}
-      className={`bg-cardBG text-black w-full ssmd:w-[300px] rounded-lg p-1 m-auto my-2 ssmd:my-6`}
+      className={`bg-cardBG text-black w-[70%] ssmd:w-[300px] rounded-lg p-1 m-auto my-2 ssmd:my-6`}
       variants={cardVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
@@ -64,15 +64,15 @@ function ProjectCard({ project, index }) {
           className="rotate-45 flex justify-end float-end"
         />
       </div>
-      <div className="flex ssmd:hidden  items-center w-full h-[220px] gap-5">
+      <div className="flex ssmd:hidden justify-start  items-center w-[90%] gap-10">
         <div className="w-2/4">
         <img
           src={project.image}
           alt={project.id}
-          className="rounded-lg w-full bg-cover"
+          className="rounded-lg  bg-cover"
         />
         </div>
-        <div >
+        <div>
           <h1 className="font-bold text-lg py-1">{project.projectName}</h1>
           <h1 className="font-bold text-lg py-1">Order by :{project.client}</h1>
           <div>
