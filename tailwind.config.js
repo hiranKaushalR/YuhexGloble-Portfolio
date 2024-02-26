@@ -27,6 +27,7 @@ export default {
         cardRes: "880px", 
         lmd: '945px',
         mlg:"1100px",
+        mslg: "1028px",
         mmlg: "1270px"
       },
       fontFamily: {

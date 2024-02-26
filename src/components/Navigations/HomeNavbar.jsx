@@ -110,7 +110,7 @@ function HomeNavbar(props) {
                   <h1 className="text-xl">YuhexGlobal</h1>
                   <img src={close} alt="close" className="w-6 xxxs:w-8" />
                 </li>
-                <li className="m-1 mt-3  pl-8 xxs:pl-0 p-2">
+                <li className="m-1 mt-3  pl-8 p-2">
                   <Link
                     to="navigation-bar"
                     smooth={true}
@@ -123,7 +123,7 @@ function HomeNavbar(props) {
                     Home
                   </Link>
                 </li>
-                <li className="m-1 pl-8 xxs:pl-0 p-2">
+                <li className="m-1 pl-8 p-2">
                   <Link
                     to="service"
                     smooth={true}
@@ -136,7 +136,7 @@ function HomeNavbar(props) {
                     Service
                   </Link>
                 </li>
-                <li className="m-1 pl-8 xxs:pl-0 p-2">
+                <li className="m-1 pl-8 p-2">
                   <Link
                     to="project"
                     smooth={true}
@@ -149,13 +149,13 @@ function HomeNavbar(props) {
                     Projects
                   </Link>
                 </li>
-                <li className="m-1 pl-8 xxs:pl-0 p-2">
+                <li className="m-1 pl-8 p-2">
                   <NavLink to="/blogs">Blogs</NavLink>
                 </li>
-                <li className="m-1 pl-8 xxs:pl-0 p-2">
+                <li className="m-1 pl-8 p-2">
                   <NavLink to="/about">About</NavLink>
                 </li>
-                <li className="m-1 pl-8 xxs:pl-0 p-2">
+                <li className="m-1 pl-8 p-2">
                   <NavLink to="/contact">Contact</NavLink>
                 </li>
                 <li className="to-the-center py-4" onClick={hideSidebar}>
