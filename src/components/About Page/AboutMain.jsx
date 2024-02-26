@@ -12,7 +12,7 @@ function AboutMain() {
       <div className="py-10 mx-[10%]">
         <AboutBody />
       </div>
-      <div className="py-10 mx-[10%]">
+      <div className="py-10">
         <AboutSummary />
       </div>
       <div className="py-10 mx-[10%]">

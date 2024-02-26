@@ -21,10 +21,12 @@ function Navbar() {
   return (
     <header className="bg-primary text-white sticky top-0 z-50 py-10">
       <div className="flex justify-between items-center mx-auto  px-[14%]">
-        <h1 className="font-bold text-lg">YuhexGloble</h1>
+      <NavLink to="/">
+          <h1 className="font-bold text-[26px] mlg:text-lg">YuhexGlobal</h1>
+        </NavLink>
         <nav>
           {/* Navigation for desktop mode */}
-          <ul className="hidden navRes:flex font-semibold items-center">
+          <ul className="hidden mlg:flex font-semibold items-center">
             <li className="mx-4">
               <NavLink to="/">Home</NavLink>
             </li>
@@ -54,7 +56,7 @@ function Navbar() {
           </ul>
 
           {/* Navigation for mobile mode */}
-          <div onClick={showSidebar} className="block navRes:hidden">
+          <div onClick={showSidebar} className="block mlg:hidden">
             <img src={menu} alt="Menu" className="w-8 h-6 cursor-pointer" />
           </div>
           <AnimatePresence>
@@ -70,7 +72,7 @@ function Navbar() {
                   onClick={hideSidebar}
                   className="flex justify-between items-center p-4 border-b-4"
                 >
-                  <h1 className="text-xl">YuhexGlobal</h1>
+                     <NavLink to="/"><h1 className="text-xl">YuhexGlobal</h1></NavLink>
                   <img src={close} alt="close" className="w-8" />
                 </li>
                 <li className="m-1 mt-3  p-2">

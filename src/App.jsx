@@ -11,6 +11,7 @@ import ProjectBody from "./components/Project Page/ProjectBody";
 import BlogBody from "./components/Blog Page/BlogBody";
 import AboutMain from "./components/About Page/AboutMain";
 import ContactBody from "./components/Contact Page/ContactBody";
+import ScrollToTop from "./components/ScrollToTop";
 
 import "./App.scss";
 import NoPage from "./components/No Page/NoPage";
@@ -38,6 +39,7 @@ function App() {
   }, [openModal]);
   return (
     <BrowserRouter>
+     <ScrollToTop />
       {/* Conditionally render different navigation bars based on the current route */}
       <Routes>
         <Route

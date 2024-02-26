@@ -66,19 +66,19 @@ function ProjectCard({ project, index }) {
       </div>
       <div className="hidden xsm:flex ssmd:hidden justify-start  items-center w-[90%] gap-10">
         <div className="w-2/4">
-        <img
-          src={project.image}
-          alt={project.id}
-          className="rounded-lg  bg-cover"
-        />
+          <img
+            src={project.image}
+            alt={project.id}
+            className="rounded-lg  bg-cover"
+          />
         </div>
         <div>
           <h1 className="font-bold smmd:text-lg py-1">{project.projectName}</h1>
           <h1 className="font-bold text-xs py-1">Order by :{project.client}</h1>
           <div>
-          <div className="flex justify-center gap-x-[5px] smmd:gap-x-4">
-            {renderStars(project.rating)}
-          </div>
+            <div className="flex justify-center gap-x-[5px] smmd:gap-x-4">
+              {renderStars(project.rating)}
+            </div>
           </div>
         </div>
       </div>
@@ -103,9 +103,13 @@ function Projects() {
       <div class="flex justify-center my-4">
         <NavLink to="/project">
           {" "}
-          <button class="border-2 border-cardBG font-semibold py-2 px-8 rounded-lg text-xl">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            class="border-2 border-cardBG font-semibold py-2 px-8 rounded-lg text-xl"
+          >
             See More
-          </button>
+          </motion.button>
         </NavLink>
       </div>
     </div>

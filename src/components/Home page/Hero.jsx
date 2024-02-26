@@ -3,11 +3,33 @@ import Slider from "react-slick";
 import { technologies } from "../../constants";
 import { Link } from "react-router-dom";
 import Modal from "../Modal/Modal";
+import { motion } from "framer-motion";
 
 function Hero(props) {
   // For the Appoinment Modal
   const openModal = props.openModal;
   const setOpenModal = props.setOpenModal;
+
+  // giving animations 
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.2,
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
 
   var settings = {
     dots: false,
@@ -45,13 +67,22 @@ function Hero(props) {
 
   // Rendering Technology Icons
   const technologyIcons = technologies.map((tech) => (
-    <div id={tech.id}>
-      <img src={tech.icon} alt={tech.id} className="w-8 xxs:w-12 sm:w-10 md:w-14" />
-    </div>
+    <motion.div variants={item} key={tech.id}>
+      <img
+        src={tech.icon}
+        alt={tech.id}
+        className="w-8 xxs:w-12 sm:w-10 md:w-14"
+      />
+    </motion.div>
   ));
   return (
     <section className=" bg-primary text-white px-6" id="navigation-bar">
-      <div className="flex items-center justify-evenly flex-col text-center p-0 m-auto h-screen mx-[10%]">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="flex items-center justify-evenly flex-col text-center p-0 m-auto h-screen mx-[10%]"
+      >
         <div className="flex justify-between items-center flex-col">
           <h1 className="capitalize text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mx-[2%] pb-6 mt-10">
             let's construct your high performance, professionally designed
@@ -79,7 +110,7 @@ function Hero(props) {
         </Slider>
 
         <div></div>
-      </div>
+      </motion.div>
       {openModal && <Modal setOpenModal={setOpenModal} />}
     </section>
   );

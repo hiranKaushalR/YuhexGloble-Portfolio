@@ -3,11 +3,11 @@ import { summary } from "../../constants";
 
 function AboutSummary() {
   return (
-    <div>
+    <div className="w-[1028px] mx-auto text-white">
       <div>
         <h1 className="text-3xl  font-bold text-center py-5">Summary</h1>
       </div>
-      <div className="bg-formBG flex flex-wrap mslg:flex-nowrap gap-10 mx-10 justify-around items-stretch py-6 px-4 rounded-xl">
+      <div className="bg-primary flex flex-wrap mslg:flex-nowrap gap-10 mx-10 justify-around items-center py-6 px-4 rounded-xl">
         {summary.map((detail) => (
           <div
             id={detail.id}

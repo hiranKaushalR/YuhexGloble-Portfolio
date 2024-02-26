@@ -59,7 +59,7 @@ function TestimonialsWithAnimations({ service, index }) {
       x: 0,
       y: 0,
       transition: {
-        duration: 0.7,
+        duration: 2,
         ease: "easeInOut",
       },
     },

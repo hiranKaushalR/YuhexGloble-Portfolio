@@ -25,10 +25,12 @@ function BlogNavbar(props) {
   return (
     <header className="bg-primary text-white sticky top-0 z-50 py-10">
       <div className="flex justify-between items-center mx-auto  px-[14%]">
-        <h1 className="font-bold text-lg">YuhexGlobal</h1>
+      <NavLink to="/">
+          <h1 className="font-bold text-[26px] mlg:text-lg">YuhexGlobal</h1>
+        </NavLink>
         <nav>
           {/* Navigation for desktop mode */}
-          <ul className="hidden navRes:flex font-semibold items-center">
+          <ul className="hidden mlg:flex font-semibold items-center">
             <li className="mx-4">
               <NavLink to="/">Home</NavLink>
             </li>
@@ -69,14 +71,14 @@ function BlogNavbar(props) {
           {/* Navigation for mobile mode */}
           <div
             onClick={openModal ? "" : showSidebar}
-            className="block navRes:hidden"
+            className="block mlg:hidden"
           >
             <img src={menu} alt="Menu" className="w-8 h-6 cursor-pointer" />
           </div>
           <AnimatePresence>
             {toggleSidebar && (
               <motion.ul
-                className="fixed top-0 left-0 flex flex-col items-start justify-start bg-primary sidebar w-full"
+                className="fixed top-0 left-0 text-center text-[18px] xxs:text-[25px] xxsm:text-[30px] flex flex-col items-start justify-start bg-primary sidebar w-full"
                 initial={{ x: "-100%" }}
                 animate={{ x: 0 }}
                 exit={{ x: "-100%" }}
@@ -84,40 +86,40 @@ function BlogNavbar(props) {
               >
                 <li
                   onClick={hideSidebar}
-                  className="flex justify-between items-center p-4 border-b-4"
+                  className="flex justify-between items-center p-4 border-b-4  text-left"
                 >
-                  <h1 className="text-xl">YuhexGlobal</h1>
+                       <NavLink to="/"><h1 className="text-xl">YuhexGlobal</h1></NavLink>
                   <img src={close} alt="close" className="w-8" />
                 </li>
-                <li className="m-1 mt-3  p-2">
+                <li className="mt-[24px] xxs:mt-[100px] xxsm:mt-[70px]">
                   <NavLink to="/">Home</NavLink>
                 </li>
-                <li className="m-1 p-2">
+                <li className="mt-[18px] xxs:mt-[16px] xxsm:mt-[20px]">
                   <NavLink to="/e">Service</NavLink>
                 </li>
-                <li className="m-1 p-2">
+                <li className="mt-[18px] xxs:mt-[16px] xxsm:mt-[20px]">
                   <NavLink to="/project">Project</NavLink>
                 </li>
-                <li className="m-1 p-2">
+                <li className="mt-[18px] xxs:mt-[16px] xxsm:mt-[20px]">
                   <NavLink to="/blogs">Blogs</NavLink>
                 </li>
-                <li className="m-1 p-2">
+                <li className="mt-[18px] xxs:mt-[16px] xxsm:mt-[20px]">
                   <NavLink to="/about">About</NavLink>
                 </li>
-                <li className="m-1 p-2">
+                <li className="mt-[18px] xxs:mt-[16px] xxsm:mt-[20px]">
                   <NavLink to="/contact">Contact</NavLink>
                 </li>
                 <li className="to-the-center my-4" onClick={hideSidebar}>
                   <a href="#"></a>
                   <button
-                    className="bg-[#477C99] px-6 py-2 font-semibold mx-auto rounded-lg"
+                    className="bg-[#477C99] px-6 py-2 font-semibold mx-auto rounded-lg text-[16px]"
                     onClick={() => setOpenModal(true)}
                   >
                     Book An Appointment
                   </button>
                   <div className="flex justify-between items-center p-6 pt-12">
-                    {/* Render social media icons */}
-                    {socialMediaForMenu.map((socialMediaIcon) => (
+                    
+                    {/* {socialMediaForMenu.map((socialMediaIcon) => (
                       <div key={socialMediaIcon.id}>
                         <a href={socialMediaIcon.link}>
                           <img
@@ -127,7 +129,7 @@ function BlogNavbar(props) {
                           />
                         </a>
                       </div>
-                    ))}
+                    ))} */}
                   </div>
                 </li>
               </motion.ul>

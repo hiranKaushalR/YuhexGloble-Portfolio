@@ -30,10 +30,18 @@ function ServiceCard({ service, index }) {
       variants={cardVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
     >
       <div className="flex flex-col xxxs:flex-row  items-center w-full xxxs:h-[100px] xxxs:gap-5">
-        <img src={service.image} alt={service.id} className="rounded-lg h-full bg-cover" />
-        <h1 className="font-bold xxxs:text-sm xxms:text-lg py-2 xxxs:py-1 text-center">{service.topic}</h1>
+        <img
+          src={service.image}
+          alt={service.id}
+          className="rounded-lg h-full bg-cover"
+        />
+        <h1 className="font-bold xxxs:text-sm xxms:text-lg py-2 xxxs:py-1 text-center">
+          {service.topic}
+        </h1>
       </div>
     </motion.div>
   );
@@ -41,8 +49,10 @@ function ServiceCard({ service, index }) {
 
 function Service() {
   return (
-    <div className="my-10" >
-      <h1 className="font-bold text-center text-4xl py-12" id="service">Our Services</h1>
+    <div className="my-10">
+      <h1 className="font-bold text-center text-4xl py-12" id="service">
+        Our Services
+      </h1>
       <div className="flex flex-wrap mx-[10%] items-stretch font-poppins gap-x-10">
         {serviceDetails.map((service, index) => (
           <ServiceCard key={service.id} service={service} index={index} />

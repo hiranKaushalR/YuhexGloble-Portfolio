@@ -49,7 +49,7 @@ function Footer() {
           </ul>
           <div className="flex flex-col xs:flex-row xs:items-center justify-center gap-4 xs:gap-10 my-9">
             {contacts.map((contact) => (
-              <div className="flex items-center gap-4 font-roboto">
+              <div className="flex items-center gap-4 font-roboto" key={contact.id}>
                 <img
                   src={contact.icon}
                   alt={contact.id}
@@ -61,7 +61,7 @@ function Footer() {
           </div>
           <div className="flex justify-between xs:justify-center items-center xs:gap-20">
             {socialMediaForMenu.map((socialmedia) => (
-              <div id={socialmedia.id}>
+              <div key={socialmedia.id}>
                 <a href={socialmedia.link} target="_blank">
                   <img
                     src={socialmedia.icon}
