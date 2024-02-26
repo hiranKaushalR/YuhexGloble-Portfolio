@@ -13,6 +13,7 @@ export default {
         formBorder: "#59E3F5",
       },
       screens: {
+        xxxs: '350px',
         xxs: "400px",
         xxms: "440px",
         xmxs: "540px",
@@ -25,7 +26,8 @@ export default {
         navRes: "860px",
         cardRes: "880px", 
         lmd: '945px',
-        mlg:"1100px"
+        mlg:"1100px",
+        mmlg: "1270px"
       },
       fontFamily: {
         poppins: ['"Poppins"',  ...defaultTheme.fontFamily.sans],

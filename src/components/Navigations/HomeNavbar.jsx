@@ -22,7 +22,7 @@ function HomeNavbar(props) {
   }
 
   return (
-    <header className="bg-primary text-white sticky top-0 z-50  py-10">
+    <header className="bg-primary text-white sticky top-0 z-50 py-5  xxxs:py-10">
       <div className="flex justify-between items-center mx-auto px-[14%]">
         <h1 className="font-bold text-[26px] mlg:text-lg">YuhexGlobal</h1>
         <nav>
@@ -88,7 +88,11 @@ function HomeNavbar(props) {
             onClick={openModal ? "" : showSidebar}
             className="block mlg:hidden"
           >
-            <img src={menu} alt="Menu" className="w-8 h-6 cursor-pointer" />
+            <img
+              src={menu}
+              alt="Menu"
+              className="w-6 h-6 xxxs:w-8 xxxs:h-6 cursor-pointer"
+            />
           </div>
           <AnimatePresence>
             {toggleSidebar && (
@@ -104,9 +108,9 @@ function HomeNavbar(props) {
                   className="flex justify-between items-center p-4 border-b-4"
                 >
                   <h1 className="text-xl">YuhexGlobal</h1>
-                  <img src={close} alt="close" className="w-8" />
+                  <img src={close} alt="close" className="w-6 xxxs:w-8" />
                 </li>
-                <li className="m-1 mt-3  p-2">
+                <li className="m-1 mt-3  pl-8 xxs:pl-0 p-2">
                   <Link
                     to="navigation-bar"
                     smooth={true}
@@ -119,7 +123,7 @@ function HomeNavbar(props) {
                     Home
                   </Link>
                 </li>
-                <li className="m-1 p-2">
+                <li className="m-1 pl-8 xxs:pl-0 p-2">
                   <Link
                     to="service"
                     smooth={true}
@@ -132,7 +136,7 @@ function HomeNavbar(props) {
                     Service
                   </Link>
                 </li>
-                <li className="m-1 p-2">
+                <li className="m-1 pl-8 xxs:pl-0 p-2">
                   <Link
                     to="project"
                     smooth={true}
@@ -145,13 +149,13 @@ function HomeNavbar(props) {
                     Projects
                   </Link>
                 </li>
-                <li className="m-1 p-2">
+                <li className="m-1 pl-8 xxs:pl-0 p-2">
                   <NavLink to="/blogs">Blogs</NavLink>
                 </li>
-                <li className="m-1 p-2">
+                <li className="m-1 pl-8 xxs:pl-0 p-2">
                   <NavLink to="/about">About</NavLink>
                 </li>
-                <li className="m-1 p-2">
+                <li className="m-1 pl-8 xxs:pl-0 p-2">
                   <NavLink to="/contact">Contact</NavLink>
                 </li>
                 <li className="to-the-center py-4" onClick={hideSidebar}>
@@ -162,8 +166,8 @@ function HomeNavbar(props) {
                   >
                     Book An Appointment
                   </button>
-                  <div className="flex justify-between items-center p-6 pt-12">
-                    {/* Render social media icons */}
+                  {/* <div className="flex justify-between items-center p-6 pt-12">
+                    
                     {socialMediaForMenu.map((socialMediaIcon) => (
                       <div key={socialMediaIcon.id}>
                         <a href={socialMediaIcon.link}>
@@ -175,7 +179,7 @@ function HomeNavbar(props) {
                         </a>
                       </div>
                     ))}
-                  </div>
+                  </div> */}
                 </li>
               </motion.ul>
             )}

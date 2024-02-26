@@ -117,7 +117,7 @@ function ContactFormWithAnimations({ project, index }) {
           </div>
   
           <div className="hidden mlg:flex justify-between items-center flex-col gap-10 w-1/4">
-            <h1 className="text-3xl">Get In Touch</h1>
+            <h1 className="text-[30px] mmlg:text-[40px] font-black">Get In Touch</h1>
             <div className="flex justify-between w-full">
               {socialMediaForMenu.map((socialmedia) => (
                 <div id={socialmedia.id}>

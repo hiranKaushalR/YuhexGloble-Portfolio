@@ -91,7 +91,7 @@ function Projects() {
     <div className="my-12 w-full" id="project">
       <div className="pb-2 text-center ">
         <h1 className="text-4xl font-semibold">Latest of us</h1>
-        <h1 className="text-lg capitalize font-poppins">
+        <h1 className="text-xs xxms:text-lg capitalize font-poppins">
           most recent projects of YuhexGloble's
         </h1>
       </div>

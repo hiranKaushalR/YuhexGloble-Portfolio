@@ -72,7 +72,7 @@ function TestimonialsWithAnimations({ service, index }) {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 100000,
+    autoplaySpeed: 2000,
     pauseOnHover: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -91,30 +91,32 @@ function TestimonialsWithAnimations({ service, index }) {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-cardBG text-black rounded-xl py-2 h-[320px] "
+              className="bg-cardBG text-black rounded-xl py-2 h-[350px] xxms:h-[320px] "
             >
-              
               <div className="items-center justify-between border-b-2 border-customRed pb-4 px-[3%]">
-                <div className="flex items-center  gap-1">
+                <div className="flex items-center flex-col xxms:flex-row text-center  gap-1">
                   <img
                     src={testimonial.avatar}
                     alt="avatar"
                     className="rounded-full w-16"
                   />
-                  <div className="relative w-full">
+                  <div className="w-full">
                     <h1 className="text-sm p-0 font-semibold">
                       {testimonial.name}
                     </h1>
-                    <h3 className="text-xs p-0 font-roboto">{testimonial.jobTitle}</h3>
+                    <h3 className="text-xs p-0 font-roboto">
+                      {testimonial.jobTitle}
+                    </h3>
                   </div>
-                  <div className="flex gap-x-1 pr-10">{renderStars(testimonial.rating)}</div>
+                  <div className="flex gap-x-1 xxms:pr-10">
+                    {renderStars(testimonial.rating)}
+                  </div>
                 </div>
               </div>
-              <div className="text-justify text-sm px-[5%] pt-2">
+              <div className="text-justify text-xs xxms:text-sm px-[5%] pt-2">
                 {testimonial.comment}
               </div>
-              </div>
-          
+            </div>
           ))}
         </Slider>
       </div>

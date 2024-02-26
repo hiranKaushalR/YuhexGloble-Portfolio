@@ -26,14 +26,14 @@ function ServiceCard({ service, index }) {
   return (
     <motion.div
       ref={ref}
-      className="bg-cardBG text-Black rounded-lg p-1 m-auto min-w-[300px] w-full ssmd:w-[40%] my-2 ssmd:my-8"
+      className="bg-cardBG text-Black rounded-lg p-1 m-auto  w-[90%]  xxxs:min-w-[300px] ssmd:w-[40%] my-2 ssmd:my-8"
       variants={cardVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
     >
-      <div className="flex  items-center w-full h-[100px] gap-5">
+      <div className="flex flex-col xxxs:flex-row  items-center w-full xxxs:h-[100px] xxxs:gap-5">
         <img src={service.image} alt={service.id} className="rounded-lg h-full bg-cover" />
-        <h1 className="font-bold text-lg py-1">{service.topic}</h1>
+        <h1 className="font-bold xxxs:text-sm xxms:text-lg py-2 xxxs:py-1 text-center">{service.topic}</h1>
       </div>
     </motion.div>
   );
