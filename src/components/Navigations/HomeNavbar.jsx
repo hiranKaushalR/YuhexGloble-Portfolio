@@ -24,7 +24,7 @@ function HomeNavbar(props) {
   return (
     <header className="bg-primary text-white sticky top-0 z-50  py-10">
       <div className="flex justify-between items-center mx-auto px-[14%]">
-        <h1 className="font-bold text-lg">YuhexGlobal</h1>
+        <h1 className="font-bold text-[26px] mlg:text-lg">YuhexGlobal</h1>
         <nav>
           {/* Navigation for desktop mode */}
           <ul className="hidden mlg:flex font-semibold items-center">

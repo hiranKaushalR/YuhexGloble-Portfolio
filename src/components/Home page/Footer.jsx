@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="bg-primary text-white pt-8">
       <div className="mx-[10%] px-[3%]">
-        <div className="flex justify-between items-center flex-col sm:flex-row border-b-2">
+        <div className="flex justify-between items-center flex-col cardRes:flex-row border-b-2">
           <div className="pb-4">
             <h1 className="text-4xl font-bold">YuhexGlobal</h1>
             <h2 className="text-[12px]">Company Description Goes Here</h2>
@@ -14,12 +14,12 @@ function Footer() {
             <input
               type="email"
               placeholder="Sign-up for the News and Offers"
-              className="bg-primary text-white px-2 py-1 md:px-4 md:py-2 w-[280px] md:w-[300px] border-white border-solid border  focus:outline-none font-roboto radius-input"
+              className="bg-primary text-white px-2 py-1 md:px-4 md:py-2 w-[280px] md:w-[300px] border-white border-solid border  focus:outline-none font-roboto radius-input rounded-md xs:rounded-l-md xs:rounded-r-none"
             />
             <input
               type="submit"
               value="Sign-Up"
-              className="font-semibold bg-buttonBG px-2 md:px-4 md:py-2  border-buttonBG border-solid border radius-button cursor-pointer"
+              className="font-semibold bg-buttonBG px-2 md:px-4 md:py-2  border-buttonBG border-solid cursor-pointer rounded-md xs:rounded-r-md xs:rounded-l-none"
             />
           </form>
         </div>

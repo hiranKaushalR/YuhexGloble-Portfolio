@@ -14,9 +14,13 @@ export default {
       },
       screens: {
         xxs: "400px",
+        xxms: "440px",
         xmxs: "540px",
         xs: "565px",
+        xxsm: '605px',
+        xsm: '660px',
         smd: "700px",
+        smmd: "740px",
         ssmd: "800px",
         navRes: "860px",
         cardRes: "880px", 

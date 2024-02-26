@@ -73,7 +73,7 @@ function ContactFormWithAnimations({ project, index }) {
 
   return (
     <motion.div
-      className="bg-formBG rounded-lg  flex justify-center items-center flex-col w-full"
+      className="bg-formBG rounded-lg  flex justify-center items-center flex-col w-full font-roboto"
       ref={ref}
       variants={cardVariants}
       initial="hidden"
@@ -82,7 +82,7 @@ function ContactFormWithAnimations({ project, index }) {
       {!showThankMessage && (
         <div className="flex justify-evenly items-center w-full">
           <div className="">
-            <h1 className=" text-[40px] font-semibold pb-4">Let's Work Well Together</h1>
+            <h1 className="text-[20px] xxms:text-[28px] xxsm:text-[40px] font-semibold pb-4">Let's Work Well Together</h1>
             <form className="flex justify-between items-stretch flex-col gap-4 font-roboto">
               <input
                 type="text"

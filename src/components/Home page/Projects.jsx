@@ -49,7 +49,7 @@ function ProjectCard({ project, index }) {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
     >
-      <div className="hidden ssmd:block">
+      <div className="block xsm:hidden ssmd:block">
         <h1 className="text-center py-1 text-xl capitalize font-semibold">
           {project.projectName}
         </h1>
@@ -64,7 +64,7 @@ function ProjectCard({ project, index }) {
           className="rotate-45 flex justify-end float-end"
         />
       </div>
-      <div className="flex ssmd:hidden justify-start  items-center w-[90%] gap-10">
+      <div className="hidden xsm:flex ssmd:hidden justify-start  items-center w-[90%] gap-10">
         <div className="w-2/4">
         <img
           src={project.image}
@@ -73,10 +73,10 @@ function ProjectCard({ project, index }) {
         />
         </div>
         <div>
-          <h1 className="font-bold text-lg py-1">{project.projectName}</h1>
-          <h1 className="font-bold text-lg py-1">Order by :{project.client}</h1>
+          <h1 className="font-bold smmd:text-lg py-1">{project.projectName}</h1>
+          <h1 className="font-bold text-xs py-1">Order by :{project.client}</h1>
           <div>
-          <div className="flex justify-center gap-x-4">
+          <div className="flex justify-center gap-x-[5px] smmd:gap-x-4">
             {renderStars(project.rating)}
           </div>
           </div>
@@ -100,7 +100,7 @@ function Projects() {
           <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>
-      <div class="flex justify-center">
+      <div class="flex justify-center my-4">
         <NavLink to="/project">
           {" "}
           <button class="border-2 border-cardBG font-semibold py-2 px-8 rounded-lg text-xl">
