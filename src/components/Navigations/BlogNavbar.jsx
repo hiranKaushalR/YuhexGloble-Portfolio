@@ -5,7 +5,6 @@ import menu from "../../assets/Menu.png";
 import close from "../../assets/close.png";
 import { socialMediaForMenu } from "../../constants";
 import { NavLink } from "react-router-dom";
-import { Link } from "react-scroll";
 
 function BlogNavbar(props) {
   const [toggleSidebar, setToggleSidebar] = useState(false);
@@ -24,7 +23,11 @@ function BlogNavbar(props) {
 
   return (
     <header className="bg-primary text-white sticky top-0 z-50 py-10">
-      <div className="flex justify-between items-center mx-auto  px-[14%]">
+      <div
+        className={`flex justify-between items-center mx-auto px-[14%] ${
+          openModal ? "pointer-events-none" : "pointer-events-auto"
+        }`}
+      >
       <NavLink to="/">
           <h1 className="font-bold text-[26px] mlg:text-lg">YuhexGlobal</h1>
         </NavLink>
@@ -47,7 +50,7 @@ function BlogNavbar(props) {
               </NavLink>
             </li>
             <li className="mx-4">
-              <NavLink to="/project">Project</NavLink>
+              <NavLink to="/project">Projects</NavLink>
             </li>
             <li className="mx-4">
               <NavLink to="/blogs">Blogs</NavLink>
@@ -98,7 +101,7 @@ function BlogNavbar(props) {
                   <NavLink to="/e">Service</NavLink>
                 </li>
                 <li className="mt-[18px] xxs:mt-[16px] xxsm:mt-[20px]">
-                  <NavLink to="/project">Project</NavLink>
+                  <NavLink to="/project">Projects</NavLink>
                 </li>
                 <li className="mt-[18px] xxs:mt-[16px] xxsm:mt-[20px]">
                   <NavLink to="/blogs">Blogs</NavLink>

@@ -33,7 +33,7 @@ function ServiceCard({ service, index }) {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      <div className="flex flex-col xxxs:flex-row  items-center w-full xxxs:h-[100px] xxxs:gap-5">
+      <div className="flex flex-col xxxs:flex-row  items-center w-full xxxs:h-[100px] xxxs:gap-5 cursor-pointer">
         <img
           src={service.image}
           alt={service.id}

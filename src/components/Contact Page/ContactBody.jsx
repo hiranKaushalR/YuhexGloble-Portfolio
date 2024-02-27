@@ -18,6 +18,11 @@ function ContactBody() {
         </h1>
         <ContactForm />
       </div>
+      <div className="font-bold text-white text-center text-lg pb-10 font-poppins">
+        <h1>Do you need any Help ?</h1>
+        <h1>Contact Support</h1>
+        <button className="bg-buttonBG text-black my-3 px-6 py-2 rounded-md">Call Now</button>
+      </div>
     </div>
   );
 }

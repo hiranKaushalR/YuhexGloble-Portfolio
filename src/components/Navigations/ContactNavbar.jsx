@@ -23,7 +23,11 @@ function ContactNavbar(props) {
 
   return (
     <header className="bg-buttonBG text-white sticky top-0 z-50 py-10">
-      <div className="flex justify-between items-center mx-auto px-[14%]">
+      <div
+        className={`flex justify-between items-center mx-auto px-[14%] ${
+          openModal ? "pointer-events-none" : "pointer-events-auto"
+        }`}
+      >
       <NavLink to="/">
           <h1 className="font-bold text-[26px] mlg:text-lg">YuhexGlobal</h1>
         </NavLink>
@@ -37,7 +41,7 @@ function ContactNavbar(props) {
               <NavLink to="">Service</NavLink>
             </li>
             <li className="mx-4">
-              <NavLink to="/project">Project</NavLink>
+              <NavLink to="/project">Projects</NavLink>
             </li>
             <li className="mx-4">
               <NavLink to="/blogs">Blogs</NavLink>
@@ -85,7 +89,7 @@ function ContactNavbar(props) {
                   <NavLink to="">Service</NavLink>
                 </li>
                 <li className="mt-[18px] xxs:mt-[16px] xxsm:mt-[20px]">
-                  <NavLink to="/project">Project</NavLink>
+                  <NavLink to="/project">Projects</NavLink>
                 </li>
                 <li className="mt-[18px] xxs:mt-[16px] xxsm:mt-[20px]">
                   <NavLink to="/blogs">Blogs</NavLink>
