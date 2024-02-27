@@ -12,11 +12,12 @@ function Hero(props) {
 
   // giving animations 
   const container = {
-    hidden: { opacity: 1, scale: 0 },
+    hidden: { opacity: 1, scale: 0.5 },
     visible: {
       opacity: 1,
       scale: 1,
       transition: {
+        duration: 0.3,
         delayChildren: 0.2,
         staggerChildren: 0.15,
       },

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { close } from "../../assets";
+import { motion } from "framer-motion";
 import "./Modal.scss";
 
 function Modal(props) {
@@ -10,7 +11,7 @@ function Modal(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
-  const [type, setType] = useState ("web-development")
+  const [type, setType] = useState("web-development");
   const [date, setDate] = useState("");
   const [agreement, setAgreement] = useState(false);
 
@@ -42,7 +43,7 @@ function Modal(props) {
       setAgreeCheck(null);
       return;
     }
-  
+
     // Checking if email is in right syntax
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -53,7 +54,7 @@ function Modal(props) {
       setAgreeCheck(null);
       return;
     }
-  
+
     // Checking if the mobile number is valid
     if (contact.length < 10 || contact.length > 12) {
       setIsAppointmentMade(false);
@@ -63,7 +64,7 @@ function Modal(props) {
       setAgreeCheck(null);
       return;
     }
-  
+
     // Checking if user agreed to terms and conditions
     if (!agreement) {
       setIsAppointmentMade(false);
@@ -73,7 +74,7 @@ function Modal(props) {
       setNumberCheck(null);
       return;
     }
-  
+
     // If all conditions are met, set appointment made to true
     setIsAppointmentMade(true);
     setFillBlanks(null);
@@ -82,17 +83,20 @@ function Modal(props) {
     setAgreeCheck(null);
   }
 
-
   return (
-    <div className="modal-background bg-black">
-      
-      <div className="modal-container bg-formBG">
+    <motion.div
+   
+      className="modal-background backdrop-blur-lg" w-
+    >
+      <motion.div    initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3 }} className="modal-container bg-formBG">
         {!isAppointmentMade ? (
           <div>
-            <div className="title-close-button flex items-center justify-between w-full px-6">
-              <h1 className="text-2xl">Book Your Appointment</h1>
+            <div className="title-close-button flex flex-wrap-reverse items-center justify-between w-full px-6">
+              <h1 className="text-lg xxms:text-2xl">Book Your Appointment</h1>
               <button onClick={() => props.setOpenModal(false)}>
-                <img src={close} className="w-8" />{" "}
+                <img src={close} className="w-6 xxms:w-8" />{" "}
               </button>
             </div>
             <div className="body">
@@ -127,11 +131,11 @@ function Modal(props) {
                     <p className="text-[#FF0000]">{numberCheck}</p>
                   )}
                 </div>
-                <div className="flex justify-between">
+                <div className="flex flex-wrap items-stretch justify-between gap-2 w-full">
                   <select
                     type="text"
-                    className="rounded py-1 px-3 bg-formBG focus:outline-none border border-formBorder"
-                    onChange={(event) => setType (event.target.value)}
+                    className="rounded w-full xmxs:w-[48%] py-1 px-3 bg-formBG focus:outline-none border border-formBorder"
+                    onChange={(event) => setType(event.target.value)}
                   >
                     <option value="web-development">Web Development</option>
                     <option value="app-development">App Development</option>
@@ -142,7 +146,7 @@ function Modal(props) {
                   </select>
                   <input
                     type="date"
-                    className="rounded py-1 px-2 bg-formBG focus:outline-none border border-formBorder"
+                    className="rounded py-1 px-2 bg-formBG focus:outline-none border border-formBorder w-full xmxs:w-[48%]"
                     onChange={(event) => setDate(event.target.value)}
                     min={formattedDate}
                   />
@@ -202,8 +206,8 @@ function Modal(props) {
             </div>{" "}
           </div>
         )}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

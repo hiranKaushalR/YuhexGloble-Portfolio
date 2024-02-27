@@ -123,7 +123,7 @@ function ContactForm() {
             <h1 className="text-3xl">Get In Touch</h1>
             <div className="flex justify-between w-full">
               {socialMediaForMenu.map((socialmedia) => (
-                <div id={socialmedia.id}>
+                <div key={socialmedia.id}>
                   <a target="_blank" href={socialmedia.link}>
                     <img
                       src={socialmedia.icon}
@@ -136,7 +136,7 @@ function ContactForm() {
             </div>
             <div className="text-center text-lg">
               {contacts.map((contact) => (
-                <div>
+                <div key={contact.id}>
                   <h1 className="">{contact.source}</h1>
                 </div>
               ))}

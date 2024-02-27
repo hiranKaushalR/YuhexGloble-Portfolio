@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { socialMediaForMenu } from "../../constants";
 import { contacts } from "../../constants";
 
-function ContactFormWithAnimations({ project, index }) {
+function ContactFormWithAnimations({ index }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -82,7 +82,9 @@ function ContactFormWithAnimations({ project, index }) {
       {!showThankMessage && (
         <div className="flex justify-evenly items-center w-full">
           <div className="">
-            <h1 className="text-[20px] xxms:text-[28px] xxsm:text-[40px] font-semibold pb-4">Let's Work Well Together</h1>
+            <h1 className="text-[20px] xxms:text-[28px] xxsm:text-[40px] font-semibold pb-4">
+              Let's Work Well Together
+            </h1>
             <form className="flex justify-between items-stretch flex-col gap-4 font-roboto">
               <input
                 type="text"
@@ -115,12 +117,14 @@ function ContactFormWithAnimations({ project, index }) {
               />
             </form>
           </div>
-  
+
           <div className="hidden mlg:flex justify-between items-center flex-col gap-10 w-1/4">
-            <h1 className="text-[30px] mmlg:text-[40px] font-black">Get In Touch</h1>
+            <h1 className="text-[30px] mmlg:text-[40px] font-black">
+              Get In Touch
+            </h1>
             <div className="flex justify-between w-full">
               {socialMediaForMenu.map((socialmedia) => (
-                <div id={socialmedia.id}>
+                <div key={socialmedia.id}>
                   <a target="_blank" href={socialmedia.link}>
                     <img
                       src={socialmedia.icon}
@@ -133,7 +137,7 @@ function ContactFormWithAnimations({ project, index }) {
             </div>
             <div className="text-center text-lg">
               {contacts.map((contact) => (
-                <div>
+                <div key={contact.id}>
                   <h1 className="font-roboto">{contact.source}</h1>
                 </div>
               ))}
