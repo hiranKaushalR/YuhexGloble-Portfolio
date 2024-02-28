@@ -31,7 +31,7 @@ function AboutSummary() {
   return (
     <div className="max-w-[1028px] mx-auto ">
       <div>
-        <h1 className="text-3xl  font-bold text-center py-5">Summary</h1>
+        <h1 className="text-3xl  font-bold text-center py-5 text-black">Summary</h1>
       </div>
       <motion.div
         ref={ref}
