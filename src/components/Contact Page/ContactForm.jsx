@@ -113,13 +113,13 @@ function ContactForm() {
               <input
                 type="button"
                 value="Send"
-                className="bg-formBorder text-black rounded-md cursor-pointer py-1 font-semibold text-lg"
+                className="bg-formBorder text-white rounded-md cursor-pointer py-1 font-semibold text-lg"
                 onClick={handleContactSubmit}
               />
             </form>
           </div>
 
-          <div className="hidden lg:flex justify-between items-center flex-col gap-10 w-1/4">
+          <div className="hidden lg:flex justify-between items-center flex-col gap-10 w-1/4 text-white">
             <h1 className="text-3xl">Get In Touch</h1>
             <div className="flex justify-between w-full">
               {socialMediaForMenu.map((socialmedia) => (

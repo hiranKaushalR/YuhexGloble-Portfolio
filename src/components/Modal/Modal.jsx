@@ -86,7 +86,7 @@ function Modal(props) {
   return (
     <motion.div
    
-      className="modal-background backdrop-blur-lg" w-
+      className="modal-background backdrop-blur-[5px]" w-
     >
       <motion.div    initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}

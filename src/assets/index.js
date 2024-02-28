@@ -21,6 +21,7 @@ import fillStar from './fill-star.png';
 import unfillStar from './unfill-star.png';
 import sampleAvatar from './avatar-sample.png'
 import close from './close.png'
+import founder from './founder.jpeg'
 
 import webDevelopment from "./web-development.png";
 import seoOptimization from "./seo-optimization.png";
@@ -73,7 +74,8 @@ export {
   clockTicking,
   close,
   blogCover,
-  nopageError
+  nopageError,
+  founder
 };
 
 export { webDevelopment, seoOptimization, digitalMarketing };

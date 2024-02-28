@@ -1,7 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { serviceDetails } from "../../constants";
+import { NavLink } from "react-router-dom";
 
 function ServiceCard({ service, index }) {
   const { ref, inView } = useInView();
@@ -33,6 +33,7 @@ function ServiceCard({ service, index }) {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
+      <NavLink to='/service'>
       <div className="flex flex-col xxxs:flex-row  items-center w-full xxxs:h-[100px] xxxs:gap-5 cursor-pointer">
         <img
           src={service.image}
@@ -43,6 +44,7 @@ function ServiceCard({ service, index }) {
           {service.topic}
         </h1>
       </div>
+      </NavLink>
     </motion.div>
   );
 }
