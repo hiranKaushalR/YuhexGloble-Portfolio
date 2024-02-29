@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { aboutPage } from "../../assets";
 
 function AboutWhoAreWe() {
   return (
@@ -10,9 +9,9 @@ function AboutWhoAreWe() {
       transition={{ duration: 0.5 }}
       className="relative z-30 py-12  flex flex-wrap-reverse justify-evenly gap-6 items-center"
     >
-      <div className="w-2/4 min-w-[280px]">
-        <h1 className="text-white text-3xl  font-bold">Who Are We ?</h1>
-        <p className="text-justify font-poppins">
+      <div className="min-w-[280px]">
+        <h1 className="text-3xl font-bold pb-10 text-center">More About Yuhex Global</h1>
+        <p className="text-justify font-poppins text-sm md:text-[16px]">
           Yuhex Global Software is a leading provider of custom web, app, and
           software development solutions. Established in 2022 by Induwara
           Surasinghe, a visionary undergraduate at Birmingham City University in
@@ -51,9 +50,6 @@ function AboutWhoAreWe() {
           digital world. <br />
           <br />
         </p>
-      </div>
-      <div>
-        <img src={aboutPage} alt="" className="w-[350px]" />
       </div>
     </motion.div>
   );

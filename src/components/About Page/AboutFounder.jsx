@@ -15,7 +15,7 @@ function AboutFounder() {
           alt=""
           className="rounded min-w-[280px] w-[20%] "
         />
-        <p className="text-justify min-w-[280px] w-2/4">
+        <p className="text-justify min-w-[280px] w-2/4 ">
           {" "}
           Induwara Surasinghe is the founder and CEO of Yuhex Global Software. A
           driven undergraduate at Birmingham City University in the UK, Induwara

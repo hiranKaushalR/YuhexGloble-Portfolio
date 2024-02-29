@@ -31,9 +31,10 @@ import getInFitnessClub from "./get-in-fitness-club.png";
 import harboursidePlaza from "./harbourside-plaza.png";
 import luxuryGateways from "./luxury-gateways.png";
 
-import bubble from "./bubble.png"
+import bubble from "./bubble.jpg"
 
 import about from './about.png'
+import aboutPhone from './about-phone.jpeg'
 import aboutPage from './about-page.png'
 import clockTicking from './clock-ticking.json'
 
@@ -75,7 +76,8 @@ export {
   close,
   blogCover,
   nopageError,
-  founder
+  founder,
+  aboutPhone
 };
 
 export { webDevelopment, seoOptimization, digitalMarketing };

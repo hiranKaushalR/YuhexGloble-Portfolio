@@ -1,5 +1,5 @@
 import React from "react";
-import AboutBody from "./AboutBody";
+import AboutBody from "./AboutWhoAreWe";
 import AboutSummary from "./AboutSummary";
 import AboutTeam from "./AboutTeam";
 import AboutHead from "./AboutHead";
@@ -9,16 +9,16 @@ function AboutMain() {
   return (
     <div className="bg-white text-black">
       <AboutHead />
-
-      <div className="py-10 mx-[10%]">
-        <AboutBody />
+      <div className="pb-10 mx-[10%]">
+        <AboutFounder />
       </div>
       <div className="py-10">
         <AboutSummary />
       </div>
       <div className="py-10 mx-[10%]">
-        <AboutFounder />
+        <AboutBody />
       </div>
+
       <div className="py-10 mx-[10%]">
         <AboutTeam />
       </div>

@@ -3,7 +3,6 @@ import Modal from "../Modal/Modal";
 import { motion, AnimatePresence } from "framer-motion";
 import menu from "../../assets/Menu.png";
 import close from "../../assets/close.png";
-import { socialMediaForMenu } from "../../constants";
 import { NavLink } from "react-router-dom";
 
 function ProjectNavbar(props) {
@@ -22,7 +21,7 @@ function ProjectNavbar(props) {
   }
 
   return (
-    <header className="bg-primary text-white sticky top-0 z-50  py-10">
+    <header className="bg-formBG text-white sticky top-0 z-50  py-10">
       <div
         className={`flex justify-between items-center mx-auto px-[14%] ${
           openModal ? "pointer-events-none" : "pointer-events-auto"
@@ -38,7 +37,7 @@ function ProjectNavbar(props) {
               <NavLink to="/">Home</NavLink>
             </li>
             <li className="mx-4">
-              <NavLink to="">Service</NavLink>
+              <NavLink to="/service">Service</NavLink>
             </li>
             <li className="mx-4">
               <NavLink to="/project">Projects</NavLink>
@@ -91,7 +90,7 @@ function ProjectNavbar(props) {
                   <NavLink to="/">Home</NavLink>
                 </li>
                 <li className="mt-[18px] xxs:mt-[16px] xxsm:mt-[20px]">
-                  <NavLink to="">Service</NavLink>
+                  <NavLink to="/service">Service</NavLink>
                 </li>
                 <li className="mt-[18px] xxs:mt-[16px] xxsm:mt-[20px]">
                   <NavLink to="/project">Projects</NavLink>
@@ -114,17 +113,6 @@ function ProjectNavbar(props) {
                     Book An Appointment
                   </button>
                   <div className="flex justify-between items-center p-6 pt-12">
-                    {/* {socialMediaForMenu.map((socialMediaIcon) => (
-                      <div key={socialMediaIcon.id}>
-                        <a href={socialMediaIcon.link}>
-                          <img
-                            src={socialMediaIcon.icon}
-                            alt={socialMediaIcon.id}
-                            className="w-8 h-8"
-                          />
-                        </a>
-                      </div>
-                    ))} */}
                   </div>
                 </li>
               </motion.ul>

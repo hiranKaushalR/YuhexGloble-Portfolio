@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { socialMediaForMenu, contacts } from "../../constants";
 
 function Footer() {
@@ -26,25 +27,25 @@ function Footer() {
         <div className="mt-6 max-w-[720px] mx-auto">
           <ul className="flex flex-col xs:flex-row gap-1 xs:gap-0 justify-between md:text-lg">
             <li>
-              <a href="#home">Home</a>
+              <NavLink to='/'>Home</NavLink>
             </li>
             <li>
-              <a href="#service">Service</a>
+              <NavLink to='/service'>Service</NavLink>
             </li>
             <li>
-              <a href="#project">Projects</a>
+              <NavLink to='project'>Projects</NavLink>
             </li>
             <li>
-              <a href="#blog">Blog</a>
+              <NavLink to='/blog'>Blog</NavLink>
             </li>
             <li>
-              <a href="#about">About</a>
+              <NavLink to='/about'>About</NavLink>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <NavLink to='/contact'>Contact</NavLink>
             </li>
             <li>
-              <a href="terms">Terms and Conditions</a>
+              <NavLink to='/terms'>Terms and Conditions</NavLink>
             </li>
           </ul>
           <div className="flex flex-col xs:flex-row xs:items-center justify-center gap-4 xs:gap-10 my-9">

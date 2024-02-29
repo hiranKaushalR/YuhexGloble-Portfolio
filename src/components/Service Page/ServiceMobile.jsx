@@ -37,13 +37,14 @@ function ServiceMobile() {
           />
         </div>
         <p className="py-2">
-          Yuhex Global Software delivers cutting-edge web development solutions
-          with a focus on captivating UI/UX designs. From simple portfolios to
-          complex enterprise systems, our expertise spans a wide range of
-          industries. Using diverse technologies, we ensure that our websites
-          are secure, scalable, and efficient. Let us transform your online
-          presence and bring your vision to life with our innovative, reliable,
-          and top-quality web development services.
+          Yuhex Global Software offers top-notch mobile application development
+          services tailored to your unique needs. With a focus on innovation and
+          design, we create intuitive and engaging mobile apps that deliver
+          results. Whether you need a consumer app or a business solution, our
+          team of experts uses the latest technologies to ensure your app is not
+          only visually appealing but also powerful and secure. Partner with us
+          to bring your mobile app vision to life and unlock new possibilities
+          in the mobile world.
         </p>
       </div>
       <img src={appdev} alt="" className="w-[35%] hidden mlg:block" />

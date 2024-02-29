@@ -3,7 +3,6 @@ import Modal from "../Modal/Modal";
 import { motion, AnimatePresence } from "framer-motion";
 import menu from "../../assets/Menu.png";
 import close from "../../assets/close.png";
-import { socialMediaForMenu } from "../../constants";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 
@@ -174,20 +173,6 @@ function HomeNavbar(props) {
                   >
                     Book An Appointment
                   </button>
-                  {/* <div className="flex justify-between items-center p-6 pt-12">
-                    
-                    {socialMediaForMenu.map((socialMediaIcon) => (
-                      <div key={socialMediaIcon.id}>
-                        <a href={socialMediaIcon.link}>
-                          <img
-                            src={socialMediaIcon.icon}
-                            alt={socialMediaIcon.id}
-                            className="w-8 h-8"
-                          />
-                        </a>
-                      </div>
-                    ))}
-                  </div> */}
                 </li>
               </motion.ul>
             )}
