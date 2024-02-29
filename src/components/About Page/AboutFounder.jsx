@@ -8,12 +8,17 @@ function AboutFounder() {
         <h1 className="text-3xl font-bold text-center pb-10">
           Meet the Founder
         </h1>
+        <img
+          src={founder}
+          alt=""
+          className="rounded min-w-[280px] w-2/4 mx-auto py-5 mlg:hidden block "
+        />
       </div>
       <div className="flex flex-wrap-reverse justify-center gap-10 items-center w-full font-poppins">
         <img
           src={founder}
           alt=""
-          className="rounded min-w-[280px] w-[20%] "
+          className="rounded min-w-[280px] w-[20%] hidden mlg:block "
         />
         <p className="text-justify min-w-[280px] w-2/4 ">
           {" "}

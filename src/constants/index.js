@@ -166,9 +166,9 @@ export const projectDetails = [
     client: "John Doe",
     rating: 4,
     url: "http://www.blabla.com",
-    domain: 'www.blabla.com',
+    domain: 'blabla.com',
     image: getInFitnessClub,
-    category: ["blog", "e-commerce"],
+    category: 'Web Application',
   },
   {
     id: "project-002",
@@ -176,9 +176,9 @@ export const projectDetails = [
     client: "John Doe",
     rating: 5,
     url: "http://www.blabla.com",
-    domain: 'www.blabla.com',
+    domain: 'blabla.com',
     image: harboursidePlaza,
-    category: ["porfolio", "blog"],
+    category: 'Software Application',
   },
   {
     id: "project-003",
@@ -186,9 +186,9 @@ export const projectDetails = [
     client: "John Doe",
     rating: 3,
     url: "http://www.blabla.com",
-    domain: 'www.blabla.com',
+    domain: 'blabla.com',
     image: luxuryGateways,
-    category: ["e-commerce", "portfolio"],
+    category: "Web Application",
   },
 ];
 
