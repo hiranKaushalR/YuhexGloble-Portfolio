@@ -9,7 +9,12 @@ function AboutFounder() {
           Meet the Founder
         </h1>
       </div>
-      <div className="flex flex-wrap-reverse justify-evenly gap-10 items-center w-full font-poppins">
+      <div className="flex flex-wrap-reverse justify-center gap-10 items-center w-full font-poppins">
+        <img
+          src={founder}
+          alt=""
+          className="rounded min-w-[280px] w-[20%] "
+        />
         <p className="text-justify min-w-[280px] w-2/4">
           {" "}
           Induwara Surasinghe is the founder and CEO of Yuhex Global Software. A
@@ -28,8 +33,6 @@ function AboutFounder() {
           dedication and vision, to redefine what it means to be a global leader
           in software development.
         </p>
-
-        <img src={founder} alt="" className="rounded min-w-[280px] w-[20%] " />
       </div>
     </section>
   );

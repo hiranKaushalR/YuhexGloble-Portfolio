@@ -13,7 +13,7 @@ function ContactBody() {
         <h1 className=" text-4xl sm:text-6xl font-bold text-white">Contact</h1>
       </div>
       <div className="relative z-30 py-16 mx-[10%]">
-        <h1 className="text-xl sm:text-[40px] sm:font-semibold pb-4">
+        <h1 className="text-xl sm:text-[40px] sm:font-semibold pb-4 text-[#2e5063]">
           Let's Work Well Together
         </h1>
         <ContactForm />
