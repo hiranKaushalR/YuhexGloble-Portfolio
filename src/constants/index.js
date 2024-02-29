@@ -159,6 +159,11 @@ export const serviceDetails = [
   },
 ];
 
+
+// Three Categories 
+// **Mobile Application
+// **Software Application
+// **Web Application
 export const projectDetails = [
   {
     id: "project-001",
@@ -168,7 +173,7 @@ export const projectDetails = [
     url: "http://www.blabla.com",
     domain: 'blabla.com',
     image: getInFitnessClub,
-    category: 'Web Application',
+    category: 'Mobile Application',
   },
   {
     id: "project-002",
@@ -178,7 +183,7 @@ export const projectDetails = [
     url: "http://www.blabla.com",
     domain: 'blabla.com',
     image: harboursidePlaza,
-    category: 'Software Application',
+    category: 'Web Application',
   },
   {
     id: "project-003",
