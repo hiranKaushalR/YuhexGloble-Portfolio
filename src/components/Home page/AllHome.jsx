@@ -4,7 +4,6 @@ import Service from "./Service";
 import Projects from "./Projects";
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
-import About from "./About";
 
 function AllHome(props) {
   const openModal = props.openModal;

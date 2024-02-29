@@ -19,18 +19,18 @@ import {
   sampleAvatar,
 } from "../assets";
 
-import { webDevelopment, seoOptimization, digitalMarketing } from "../assets";
+import { smvaThumb } from "../assets";
 
-import { getInFitnessClub, harboursidePlaza, luxuryGateways } from "../assets";
-
-import { webdev, softdev, appdev } from "../assets"
+import { webdev, softdev, appdev } from "../assets";
 
 // Change the links and other info here
-const facebookLink = "https://www.facebook.com/";
-const instagramLink = "https://www.instagram.com/";
-const linkedinLink = "https://www.linkedin.com/";
-const tiktokLink = "https://www.tiktok.com/";
-const githubLink = "https://github.com/";
+const facebookLink =
+  "https://www.facebook.com/profile.php?id=61554718092921&mibextid=ZbWKwL";
+const instagramLink =
+  "https://www.instagram.com/yuhexglobal?igsh=MTFudDQ4Mm4xY3M3bw==";
+const linkedinLink = "#";
+const tiktokLink = "#";
+const githubLink = "#";
 
 const eMail = "info@yuhexglobal.com";
 const telephoneNumber = "+94 75 706 0941";
@@ -159,40 +159,19 @@ export const serviceDetails = [
   },
 ];
 
-
-// Three Categories 
+// Three Categories
 // **Mobile Application
 // **Software Application
 // **Web Application
 export const projectDetails = [
   {
     id: "project-001",
-    projectName: "Get in fitness club",
-    client: "John Doe",
-    rating: 4,
-    url: "http://www.blabla.com",
-    domain: 'blabla.com',
-    image: getInFitnessClub,
-    category: 'Mobile Application',
-  },
-  {
-    id: "project-002",
-    projectName: "Harbourside Plaza",
-    client: "John Doe",
+    projectName: "Saddathissa National School Ampara",
+    client: "School Media Unit",
     rating: 5,
-    url: "http://www.blabla.com",
-    domain: 'blabla.com',
-    image: harboursidePlaza,
-    category: 'Web Application',
-  },
-  {
-    id: "project-003",
-    projectName: "Luxury Getaways",
-    client: "John Doe",
-    rating: 3,
-    url: "http://www.blabla.com",
-    domain: 'blabla.com',
-    image: luxuryGateways,
+    url: "https://smva.online/index.html",
+    domain: "smva.online",
+    image: smvaThumb,
     category: "Web Application",
   },
 ];
@@ -248,49 +227,49 @@ export const testimonials = [
 export const summary = [
   {
     id: 1,
-    topic: 'Happy Customers',
-    count: 20
+    topic: "Happy Customers",
+    count: 20,
   },
   {
     id: 2,
-    topic: 'Website Developments',
-    count: 6
+    topic: "Website Developments",
+    count: 6,
   },
   {
     id: 3,
-    topic: 'Software Developments',
-    count: 3
+    topic: "Software Developments",
+    count: 3,
   },
   {
     id: 4,
-    topic: 'Application Developments',
-    count: 2
-  }
-]
+    topic: "Application Developments",
+    count: 2,
+  },
+];
 
 export const team = [
   {
     id: 1,
-    name: 'Induwara',
-    role: 'Back-End Developer',
-    avatar: sampleAvatar
+    name: "Induwara",
+    role: "Back-End Developer",
+    avatar: sampleAvatar,
   },
   {
     id: 2,
-    name: 'MR Gune',
-    role: 'Back-End Developer',
-    avatar: sampleAvatar
+    name: "MR Gune",
+    role: "Back-End Developer",
+    avatar: sampleAvatar,
   },
   {
     id: 3,
-    name: 'Hiran Kaushal',
-    role: 'Front-End Developer',
-    avatar: sampleAvatar
+    name: "Hiran Kaushal",
+    role: "Front-End Developer",
+    avatar: sampleAvatar,
   },
   {
     id: 4,
-    name: 'Poorna',
-    role: 'UI/UX Designer',
-    avatar: sampleAvatar
+    name: "Poorna",
+    role: "UI/UX Designer",
+    avatar: sampleAvatar,
   },
-]
+];

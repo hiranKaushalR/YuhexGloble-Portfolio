@@ -48,7 +48,7 @@ function ProjectCard({ project, index }) {
       variants={cardVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-    >
+    ><a href={project.url} target="_blank">
       <div className="block xsm:hidden ssmd:block">
         <h1 className="text-center py-1 text-xl capitalize font-semibold">
           {project.projectName}
@@ -64,6 +64,7 @@ function ProjectCard({ project, index }) {
           className="rotate-45 flex justify-end float-end"
         />
       </div>
+      </a>
       <div className="hidden xsm:flex ssmd:hidden justify-start  items-center w-[90%] gap-10">
         <div className="w-2/4">
           <img

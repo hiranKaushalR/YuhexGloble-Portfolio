@@ -23,20 +23,10 @@ import sampleAvatar from './avatar-sample.png'
 import close from './close.png'
 import founder from './founder.jpeg'
 
-import webDevelopment from "./web-development.png";
-import seoOptimization from "./seo-optimization.png";
-import digitalMarketing from "./digital-marketing.png";
-
-import getInFitnessClub from "./get-in-fitness-club.png";
-import harboursidePlaza from "./harbourside-plaza.png";
-import luxuryGateways from "./luxury-gateways.png";
 
 import bubble from "./bubble.jpg"
 
 import about from './about.png'
-import aboutPhone from './about-phone.jpeg'
-import aboutPage from './about-page.png'
-import clockTicking from './clock-ticking.json'
 
 import blogCover from './blog-cover.jpg'
 import nopageError from './404-error.svg'
@@ -45,6 +35,8 @@ import webdev from './web-dev.jpg'
 import softdev from './software-dev.svg'
 import appdev from './app-dev.jpg'
 import vision from './vision.svg'
+
+import smvaThumb from './smva-thumbnail.png'
 
 export {
   css,
@@ -70,19 +62,16 @@ export {
   unfillStar,
   sampleAvatar,
   about,
-  aboutPage,
   bubble,
-  clockTicking,
   close,
   blogCover,
   nopageError,
-  founder,
-  aboutPhone
+  founder
 };
 
-export { webDevelopment, seoOptimization, digitalMarketing };
 
-export { getInFitnessClub, harboursidePlaza, luxuryGateways };
+export {smvaThumb}
+
 
 export {webdev, softdev, appdev, vision}
 

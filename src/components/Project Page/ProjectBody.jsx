@@ -26,12 +26,38 @@ function ProjectBody() {
     <div className="pb-10">
       <div className="flex gap-2 text-lg w-full bg-formBG mb-10 text-white rounded">
         {" "}
-        <button onClick={() => setFilter(null)} className={`${filter === null ? 'bg-formBG' : 'bg-cardBG'}  px-3 rounded`}>All</button>
-        <button onClick={() => setFilter("Web Application")} className={`${filter === 'Web Application' ? 'bg-formBG' : 'bg-cardBG'}  px-3 rounded`}>Web</button>
-        <button onClick={() => setFilter("Software Application")} className={`${filter === 'Software Application' ? 'bg-formBG' : 'bg-cardBG'}  px-3 rounded`}>
+        <button
+          onClick={() => setFilter(null)}
+          className={`${
+            filter === null ? "bg-formBG" : "bg-cardBG"
+          }  px-3 rounded`}
+        >
+          All
+        </button>
+        <button
+          onClick={() => setFilter("Web Application")}
+          className={`${
+            filter === "Web Application" ? "bg-formBG" : "bg-cardBG"
+          }  px-3 rounded`}
+        >
+          Web
+        </button>
+        <button
+          onClick={() => setFilter("Software Application")}
+          className={`${
+            filter === "Software Application" ? "bg-formBG" : "bg-cardBG"
+          }  px-3 rounded`}
+        >
           Software
         </button>
-        <button onClick={() => setFilter("Mobile Application")} className={`${filter === 'Mobile Application' ? 'bg-formBG' : 'bg-cardBG'}  px-3 rounded`}>App</button>
+        <button
+          onClick={() => setFilter("Mobile Application")}
+          className={`${
+            filter === "Mobile Application" ? "bg-formBG" : "bg-cardBG"
+          }  px-3 rounded`}
+        >
+          App
+        </button>
       </div>
       <div>
         <div className="flex flex-wrap justify-center gap-16 text-center">
@@ -78,7 +104,7 @@ function ProjectBody() {
                       {filter === "Web Application"
                         ? "Web Appilcations"
                         : filter === "Software Application"
-                        ? "Software application"
+                        ? "Software applications"
                         : "Mobile Applications"}
                     </h1>
                   </div>
